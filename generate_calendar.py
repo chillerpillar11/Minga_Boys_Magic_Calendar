@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import uuid
+import json
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -10,6 +11,7 @@ from stores.funtainment import fetch_funtainment_events
 from stores.dd_munich import fetch_dd_munich_events
 
 TZ = ZoneInfo("Europe/Berlin")
+HISTORY_FILE = Path("events_history.json")
 
 
 # ---------------------------------------------------------
@@ -54,6 +56,32 @@ def generate_ics(events, filename="magic.ics"):
 
 
 # ---------------------------------------------------------
+# Event-History laden/speichern
+# ---------------------------------------------------------
+def load_history():
+    if HISTORY_FILE.exists():
+        try:
+            return json.loads(HISTORY_FILE.read_text(encoding="utf-8"))
+        except:
+            return []
+    return []
+
+
+def save_history(events):
+    serializable = []
+    for ev in events:
+        serializable.append({
+            "title": ev["title"],
+            "start": ev["start"].isoformat(),
+            "end": ev["end"].isoformat(),
+            "location": ev.get("location", ""),
+            "url": ev.get("url", ""),
+            "description": ev.get("description", "")
+        })
+    HISTORY_FILE.write_text(json.dumps(serializable, indent=2), encoding="utf-8")
+
+
+# ---------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------
 def main():
@@ -89,9 +117,52 @@ def main():
     except Exception as e:
         print("Fehler bei DD Munich:", e)
 
-    print(f"Gesamtanzahl Events: {len(all_events)}")
+    print(f"Neue Events geladen: {len(all_events)}")
 
-    generate_ics(all_events)
+    # ---------------------------------------------------------
+    # Alte Events laden
+    # ---------------------------------------------------------
+    history = load_history()
+
+    restored = []
+    for ev in history:
+        restored.append({
+            "title": ev["title"],
+            "start": datetime.fromisoformat(ev["start"]),
+            "end": datetime.fromisoformat(ev["end"]),
+            "location": ev.get("location", ""),
+            "url": ev.get("url", ""),
+            "description": ev.get("description", "")
+        })
+
+    # ---------------------------------------------------------
+    # Neue + alte Events zusammenführen
+    # ---------------------------------------------------------
+    combined = restored + all_events
+
+    # ---------------------------------------------------------
+    # Duplikate entfernen
+    # ---------------------------------------------------------
+    unique = []
+    seen = set()
+
+    for ev in combined:
+        key = (ev["title"].lower().strip(), ev["start"])
+        if key not in seen:
+            seen.add(key)
+            unique.append(ev)
+
+    print(f"Gesamtanzahl Events (inkl. Vergangenheit): {len(unique)}")
+
+    # ---------------------------------------------------------
+    # History aktualisieren
+    # ---------------------------------------------------------
+    save_history(unique)
+
+    # ---------------------------------------------------------
+    # ICS erzeugen
+    # ---------------------------------------------------------
+    generate_ics(unique)
 
 
 if __name__ == "__main__":
