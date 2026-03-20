@@ -16,7 +16,18 @@ MTGO_URL = "https://mtgoupdate.com/"
 
 
 def fetch_wizards_events():
-    print("Hole Wizards Events (stabile JSON API)...")
+    print("Hole Wizards Events (RCQ JSON API)...")
+
+    url = (
+        "https://locator.wizards.com/api/event/search"
+        "?tag=regional_championship_qualifier"
+        "&searchType=magic-events"
+        "&query=81547%20M%C3%BCnchen-Untergiesing-Harlaching,%20Deutschland"
+        "&distance=100"
+        "&page=1"
+        "&sort=date"
+        "&sortDirection=Asc"
+    )
 
     headers = {
         "User-Agent": "Mozilla/5.0",
@@ -24,7 +35,7 @@ def fetch_wizards_events():
     }
 
     try:
-        resp = requests.get(WIZARDS_API, headers=headers)
+        resp = requests.get(url, headers=headers)
         data = resp.json()
     except Exception as e:
         print("Fehler beim Laden der Wizards API:", e)
@@ -32,7 +43,6 @@ def fetch_wizards_events():
 
     events = []
 
-    # Die API liefert eine Liste unter "results"
     results = data.get("results", [])
 
     for item in results:
@@ -44,7 +54,6 @@ def fetch_wizards_events():
         if not (title and start):
             continue
 
-        # Beispiel: "2026-04-12T14:00:00"
         try:
             dt = datetime.fromisoformat(start.replace("Z", ""))
         except:
@@ -54,11 +63,11 @@ def fetch_wizards_events():
         e.name = f"{title} – {store}" if store else title
         e.begin = dt
         e.location = address
-        e.description = "WPN Event (JSON API)"
+        e.description = "Regional Championship Qualifier"
 
         events.append(e)
 
-    print(f"Wizards Events gefunden: {len(events)}")
+    print(f"Wizards RCQs gefunden: {len(events)}")
     return events
 
 
