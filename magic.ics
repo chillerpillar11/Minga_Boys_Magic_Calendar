@@ -3,58 +3,8 @@ VERSION:2.0
 PRODID:-//Magic Munich Calendar//DE
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
-UID:fb0288da-377e-4aa9-baa2-a677ea95fffe@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T180000
-DTEND:20260320T210000
-SUMMARY:Magic Draft - TMNT
-LOCATION:BB-Soiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Teilnahmegebühr €25. Es werden 3 Runden gespielt. Alle gepickten Karten darf man behalten
-END:VEVENT
-BEGIN:VEVENT
-UID:aaffed11-d83b-4000-b4e8-e0c703fcc861@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260321T100000
-DTEND:20260321T130000
-SUMMARY:Regional Championship Store Qualifier - Standard
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Gewinner des WPN Qualifier erhält 1 Slot für den Regional Championship.
-END:VEVENT
-BEGIN:VEVENT
-UID:673ac8dd-0b18-42fa-8d2d-35fe1c790a0e@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260324T180000
-DTEND:20260324T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:075d490a-9be2-49c0-91d8-5aead4e789f0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260324T180000
-DTEND:20260324T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:a8147c5a-4bf7-4936-951e-80f05755d580@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260325T180000
-DTEND:20260325T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:9543eb0e-028d-4bdf-a4e9-68811dd063d1@magic-munich
-DTSTAMP:20260320T133814
+UID:3495c8d4-809c-4f85-b4f6-fcad479d712d@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260325T180000
 DTEND:20260325T210000
 SUMMARY:Magic Modern Turnier
@@ -63,58 +13,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:b9943755-ca4b-4490-96d0-af36e2adc868@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260326T150000
-DTEND:20260326T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:a8e3a653-d516-4c8d-b965-5ce2554ad450@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260327T180000
-DTEND:20260327T210000
-SUMMARY:Magic Draft - TMNT
-LOCATION:BB-Soiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Teilnahmegebühr €25. Es werden 3 Runden gespielt. Alle gepickten Karten darf man behalten
-END:VEVENT
-BEGIN:VEVENT
-UID:edf44440-12a2-446f-8e2c-f25460acdd50@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260331T180000
-DTEND:20260331T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:60afd4f8-2853-4acd-8d76-85d25e3b30c0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260331T180000
-DTEND:20260331T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:0e26f74e-b5ac-493d-b432-d93057bda845@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260401T180000
-DTEND:20260401T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:2cb0cc9e-af17-4bfd-b0f7-9d1d5ef22d88@magic-munich
-DTSTAMP:20260320T133814
+UID:f43737bf-2e70-4d9a-93e2-be1f0a8dc87d@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260401T180000
 DTEND:20260401T210000
 SUMMARY:Magic Modern Turnier
@@ -123,38 +23,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:14fb3340-224b-470d-8f36-dd1931e6b3d0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260402T150000
-DTEND:20260402T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:ee7754a1-1ede-41dc-8e4e-90e4a89581b5@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260403T180000
-DTEND:20260403T210000
-SUMMARY:Magic Draft - TMNT
-LOCATION:BB-Soiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Teilnahmegebühr €25. Es werden 3 Runden gespielt. Alle gepickten Karten darf man behalten
-END:VEVENT
-BEGIN:VEVENT
-UID:3fac4506-4fd6-46c7-bb5a-bdbecafc5eb8@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260404T090000
-DTEND:20260404T120000
-SUMMARY:Commander Eleven
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:11 Stunden Commander im BB-Spiele. Teilnahmegebühr 11€.
-END:VEVENT
-BEGIN:VEVENT
-UID:d3c818ca-457b-4181-922f-95b35ea7085e@magic-munich
-DTSTAMP:20260320T133814
+UID:3712a40f-9671-4cd5-b088-44d358bbe593@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260404T110000
 DTEND:20260404T140000
 SUMMARY:Regional Championship Store Qualifier - Modern
@@ -163,38 +33,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Gewinner des WPN Qualifier erhält 1 Slot für den Regional Championship.
 END:VEVENT
 BEGIN:VEVENT
-UID:a150a225-30a6-45fd-ba05-818f161fac49@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260407T180000
-DTEND:20260407T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:81954e0a-a62a-4882-aad1-2cafcb42f849@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260407T180000
-DTEND:20260407T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:9c6ecffb-82b7-4cab-a296-76d86fb785bc@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260408T180000
-DTEND:20260408T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:4d21685a-3135-460b-842c-520de6f589a5@magic-munich
-DTSTAMP:20260320T133814
+UID:3dc7591b-38c7-4afb-8d98-a442fc3f341f@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260408T180000
 DTEND:20260408T210000
 SUMMARY:Magic Modern Turnier
@@ -203,58 +43,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:40609396-bc12-4b05-8ce5-d58c664625ac@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260409T150000
-DTEND:20260409T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:acbc047b-1f96-43b9-baa0-4a32976fd1d6@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260410T180000
-DTEND:20260410T210000
-SUMMARY:Magic Draft - TMNT
-LOCATION:BB-Soiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Teilnahmegebühr €25. Es werden 3 Runden gespielt. Alle gepickten Karten darf man behalten
-END:VEVENT
-BEGIN:VEVENT
-UID:5e740389-7f68-4c3a-b7bc-4969e4285af1@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260414T180000
-DTEND:20260414T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:facb38f7-b714-4d33-9a87-345becc4db59@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260414T180000
-DTEND:20260414T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:e3fc4365-2685-486a-9928-8801227d6507@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260415T180000
-DTEND:20260415T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:8ac813b8-a041-48bb-95e4-25beebdfc772@magic-munich
-DTSTAMP:20260320T133814
+UID:025d0601-87eb-4987-8554-e47b37d06b33@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260415T180000
 DTEND:20260415T210000
 SUMMARY:Magic Modern Turnier
@@ -263,98 +53,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:b0e9a3b9-8742-455c-855e-047e01e14150@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260416T150000
-DTEND:20260416T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:fe8fbcef-ca7f-4cfa-8ba9-b87b0e54af29@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T180000
-DTEND:20260417T210000
-SUMMARY:Magic: Geheimnisse von Strixhaven Prerelease
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Man bekommt ein Prerelease Pack. Es werden 3 Runden gespielt. Alle geöffneten Karten darfst du behalten. Teilnahmegebühr 36 €
-END:VEVENT
-BEGIN:VEVENT
-UID:aaec7357-5229-49d3-82f2-c720f817182d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260418T110000
-DTEND:20260418T140000
-SUMMARY:Magic: Geheimnisse von Strixhaven Prerelease
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Man bekommt ein Prerelease Pack. Es werden 3 Runden gespielt. Alle geöffneten Karten darfst du behalten. Teilnahmegebühr 36 €
-END:VEVENT
-BEGIN:VEVENT
-UID:7ebdf22c-490d-4c3b-8146-3bea79cb69fc@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260418T150000
-DTEND:20260418T180000
-SUMMARY:BB-Spiele Geheimnisse von Strixhaven Liga Kick-Off
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:BB-Spiele Liga - 3 Runden Best-of-one. Jeder Teilnehmer mit 3 Siegen erhält ein Play Booster für sein Ligadeck.
-END:VEVENT
-BEGIN:VEVENT
-UID:681788be-c181-4a67-b6bd-a61a8b73ae8f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260419T110000
-DTEND:20260419T140000
-SUMMARY:Magic Prerelease Two Headed Giant (Geheimnisse von Strixhaven))
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Man bekommt ein Prerelease Pack. Es werden 3 Runden gespielt. Alle geöffneten Karten darfst du behalten.
-END:VEVENT
-BEGIN:VEVENT
-UID:d77c8e14-683c-43b2-82f6-4b54c0d4b356@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260419T150000
-DTEND:20260419T180000
-SUMMARY:Magic: Geheimnisse von Strixhaven Prerelease
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Man bekommt ein Prerelease Pack. Es werden 3 Runden gespielt. Alle geöffneten Karten darfst du behalten. Teilnahmegebühr 36 €
-END:VEVENT
-BEGIN:VEVENT
-UID:9f6897c0-5ce2-45da-b783-bd5d3d918836@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260421T180000
-DTEND:20260421T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:0ed580c7-d932-426e-af91-8c44f939efff@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260421T180000
-DTEND:20260421T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:56c2c596-a51a-45d4-8689-de9c01729a2a@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260422T180000
-DTEND:20260422T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:c44c87a2-fa24-4d61-b8a6-3a1b4454fcd0@magic-munich
-DTSTAMP:20260320T133814
+UID:e95c9f6f-e708-487f-809b-fd83ead5abf5@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260422T180000
 DTEND:20260422T210000
 SUMMARY:Magic Modern Turnier
@@ -363,48 +63,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:7910b302-2f76-4e97-8800-49a8618edfb0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260423T150000
-DTEND:20260423T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:e0333413-5ea2-4ba5-a1ce-6d1ec16d4ee7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260428T180000
-DTEND:20260428T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:93895dfb-9146-4389-9157-43589760cf55@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260428T180000
-DTEND:20260428T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:98d8d87d-6dfd-4dce-9577-3c902da7fdb3@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260429T180000
-DTEND:20260429T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:279e2019-fb99-4e35-b914-e47a28d35f92@magic-munich
-DTSTAMP:20260320T133814
+UID:021ddb69-0aa3-4f34-b9b1-c66b06e739b3@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260429T180000
 DTEND:20260429T210000
 SUMMARY:Magic Modern Turnier
@@ -413,48 +73,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:e1a1eb3e-d519-4ced-9406-9aeae53ddf0d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260430T150000
-DTEND:20260430T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:d053e704-c031-44a9-9aaf-e88f7857b77d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260505T180000
-DTEND:20260505T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:bf47f3e8-c03f-426a-9d45-990d5da218d9@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260505T180000
-DTEND:20260505T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:4c38357e-4e1b-4460-b7be-8fd1ec56acd9@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260506T180000
-DTEND:20260506T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:05597c65-0861-4f29-950e-0b86afda8cd0@magic-munich
-DTSTAMP:20260320T133814
+UID:71aece20-5174-4caf-8b19-acce2e599614@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260506T180000
 DTEND:20260506T210000
 SUMMARY:Magic Modern Turnier
@@ -463,48 +83,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:022e546c-92ba-4073-9ccc-c94bb518fd14@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260507T150000
-DTEND:20260507T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:5067d594-76d5-4269-8137-49c543ab52af@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260512T180000
-DTEND:20260512T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:e81e6095-6eab-45d8-95db-24f25ae9a92e@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260512T180000
-DTEND:20260512T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:e75364dc-a27e-4da0-91a0-fb82f109a714@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260513T180000
-DTEND:20260513T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:aa32ac13-f8c2-4893-87ef-d5dce865b899@magic-munich
-DTSTAMP:20260320T133814
+UID:50507178-7230-411e-9ed4-1a0fd795c891@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260513T180000
 DTEND:20260513T210000
 SUMMARY:Magic Modern Turnier
@@ -513,38 +93,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:0a59bc77-c7c9-4a80-93b5-7bbe3de6fca4@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260514T150000
-DTEND:20260514T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:3d303b1b-7dc0-4548-b57a-9fcc870d7380@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260519T180000
-DTEND:20260519T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:24105429-5c81-466a-969b-2cf84444fd27@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260519T180000
-DTEND:20260519T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:9c842482-f946-4b50-a689-e768ae4968d0@magic-munich
-DTSTAMP:20260320T133814
+UID:2d2f40b5-3ecb-49ce-982e-ae0904bcbf99@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260520T180000
 DTEND:20260520T210000
 SUMMARY:Magic Modern Turnier
@@ -553,48 +103,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:886f5f7f-6ad9-45b2-9047-4a8a966678da@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260520T180000
-DTEND:20260520T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:813aacc2-5a72-4a9d-9334-281aaa0a572f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260521T150000
-DTEND:20260521T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:fed01142-ad4d-4c1c-9860-f2e362d55614@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260526T180000
-DTEND:20260526T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:e73a96e9-cb30-4782-bc98-7eb0455ce86d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260526T180000
-DTEND:20260526T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:a57b85b5-4ad7-4b0e-82b5-967387886bad@magic-munich
-DTSTAMP:20260320T133814
+UID:f19ca6d1-6ba8-437a-9d09-62be9b8e661a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260527T180000
 DTEND:20260527T210000
 SUMMARY:Magic Modern Turnier
@@ -603,58 +113,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:b1be093a-0c3c-4c0e-befc-e0d0caeccb48@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260527T180000
-DTEND:20260527T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:6efc902c-b1bc-4512-b60a-bae07476e080@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260528T150000
-DTEND:20260528T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:a900db90-2ecc-488e-aee1-6db212a41b4e@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260602T180000
-DTEND:20260602T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:87df8688-2e8a-43c8-a695-d1b7d8758eee@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260602T180000
-DTEND:20260602T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:381cba00-4b40-4cbe-ad1d-7c0c1fb2ce7b@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260603T180000
-DTEND:20260603T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:bc5a3774-a5e1-4b58-b388-d6af6441ff79@magic-munich
-DTSTAMP:20260320T133814
+UID:4b26c712-c6ee-444c-86aa-05b3b9607da8@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260603T180000
 DTEND:20260603T210000
 SUMMARY:Magic Modern Turnier
@@ -663,48 +123,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:7a7a96aa-296e-46c5-8c76-1553c801c324@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260604T150000
-DTEND:20260604T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:4f9b3c76-af13-4d70-9fc9-dd6e8ee545fd@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260609T180000
-DTEND:20260609T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:dd556be8-a076-4063-92a5-eb0eae153e14@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260609T180000
-DTEND:20260609T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:52306016-2a58-4b19-84f1-7bf942dd4faa@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260610T180000
-DTEND:20260610T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:ddc32e3f-e554-4d93-a949-ac1e87acdc08@magic-munich
-DTSTAMP:20260320T133814
+UID:8bd96f07-1e2e-4bae-85f1-e3c8b31a9669@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260610T180000
 DTEND:20260610T210000
 SUMMARY:Magic Modern Turnier
@@ -713,48 +133,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:fff46659-1a42-45dc-a5a1-2072e9cb19b1@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260611T150000
-DTEND:20260611T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:78301355-00b4-48ec-a2fd-2df7dad19f27@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260616T180000
-DTEND:20260616T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:cf7ee9ac-5a04-47fd-8870-f4e12512e9b7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260616T180000
-DTEND:20260616T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:6c57bd13-373f-4f86-8a48-f6f4a695f6bd@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260617T180000
-DTEND:20260617T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:238db99d-8550-4e5a-b1a1-c7cf211fa5e0@magic-munich
-DTSTAMP:20260320T133814
+UID:415ddbb0-7625-4c8e-a1dc-890864751f37@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260617T180000
 DTEND:20260617T210000
 SUMMARY:Magic Modern Turnier
@@ -763,48 +143,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:6248f26c-7d1f-45dd-8111-c24b69e1c4a0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260618T150000
-DTEND:20260618T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:022c4aab-d8c1-43ad-b356-c0f124e372d0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260623T180000
-DTEND:20260623T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:6aba3688-3d84-4c31-bde2-dae6ea27def1@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260623T180000
-DTEND:20260623T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:c6f0d26a-e2d7-4eaa-961c-2fb668744f29@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260624T180000
-DTEND:20260624T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:359cd815-ae62-4d39-8b2b-6a5256fa7965@magic-munich
-DTSTAMP:20260320T133814
+UID:cf0514b8-e4db-4885-900b-a4947034cbf8@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260624T180000
 DTEND:20260624T210000
 SUMMARY:Magic Modern Turnier
@@ -813,48 +153,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:c0428fa3-4027-4fc7-8659-dadaa249f1ee@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260625T150000
-DTEND:20260625T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:e9c5b85d-87d9-4ef7-b573-e2d4317b3504@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260630T180000
-DTEND:20260630T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:f16a5c47-479c-46e8-8d45-9a33fbcb33ea@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260630T180000
-DTEND:20260630T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:092d3d25-b441-4674-8a64-0e3ea0126954@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260701T180000
-DTEND:20260701T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:2651785a-38ed-46cb-8d2b-043503b51855@magic-munich
-DTSTAMP:20260320T133814
+UID:3815ec97-0be5-46d2-9b9a-211cfbb4575a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260701T180000
 DTEND:20260701T210000
 SUMMARY:Magic Modern Turnier
@@ -863,48 +163,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:3ec5ddee-28f8-4773-b9b3-5eac87da773f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260702T150000
-DTEND:20260702T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:dfb56c3b-e33b-46ac-8be7-26d9f91e0b73@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260707T180000
-DTEND:20260707T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:a5d1c5fe-f6dd-43a7-bef1-804ab2e57aba@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260707T180000
-DTEND:20260707T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:db097cc7-afb7-478c-affa-77081d1a850d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260708T180000
-DTEND:20260708T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:769d5b10-6767-49fe-99af-ab39bdda0b75@magic-munich
-DTSTAMP:20260320T133814
+UID:6a861a3b-cb63-43ad-8743-c4c7ff0eee56@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260708T180000
 DTEND:20260708T210000
 SUMMARY:Magic Modern Turnier
@@ -913,48 +173,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:e6df7178-571c-4e14-8954-d8f3592c7624@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260709T150000
-DTEND:20260709T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:388e9227-e855-4dc2-b552-8ffff0c96b79@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260714T180000
-DTEND:20260714T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:53e37e28-384e-4d72-94e9-7e992bdcc887@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260714T180000
-DTEND:20260714T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:5cc75f84-9b49-41fa-b99f-c31038a08bb0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260715T180000
-DTEND:20260715T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:19a0cd1d-5476-4215-82c0-1505452d384a@magic-munich
-DTSTAMP:20260320T133814
+UID:67f1a37b-d8aa-497d-a475-8ac2c742c6b5@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260715T180000
 DTEND:20260715T210000
 SUMMARY:Magic Modern Turnier
@@ -963,48 +183,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:dd5e72b8-bf29-47b4-b463-f5eb7bf3342f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260716T150000
-DTEND:20260716T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:57cb3cd6-46af-4cad-804a-fce04f875202@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260721T180000
-DTEND:20260721T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:fe9a0960-600f-469d-8129-73f8093a4d85@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260721T180000
-DTEND:20260721T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:498ed0a6-1abb-4926-a468-2ac3b0be5428@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260722T180000
-DTEND:20260722T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:456f17f6-af17-4b12-b110-aa2945c75729@magic-munich
-DTSTAMP:20260320T133814
+UID:3dbeb1a1-e86f-42c6-a653-6711e6eebd5a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260722T180000
 DTEND:20260722T210000
 SUMMARY:Magic Modern Turnier
@@ -1013,48 +193,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:b31916d5-beb3-4097-9d4e-52cf53a76dc6@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260723T150000
-DTEND:20260723T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:4e5a3082-0a51-47be-9d5f-630027369b67@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260728T180000
-DTEND:20260728T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:d9cd87a3-c33d-493f-a352-4d971a751594@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260728T180000
-DTEND:20260728T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:79fedd4d-a9af-4c76-8423-dd83504d2908@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260729T180000
-DTEND:20260729T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:b00fe27c-387f-4fed-822a-e81a453e878b@magic-munich
-DTSTAMP:20260320T133814
+UID:3b1d8614-6ce2-4230-92d0-911042b7d2cc@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260729T180000
 DTEND:20260729T210000
 SUMMARY:Magic Modern Turnier
@@ -1063,38 +203,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:70a1eec2-fdef-4620-af27-c05a33c142b5@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260730T150000
-DTEND:20260730T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:1ace7fd0-4156-4a67-aa7d-2c42fdcc44a7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260804T180000
-DTEND:20260804T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:c89276b2-180f-4d4c-9bd4-83419394a687@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260804T180000
-DTEND:20260804T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:40691faf-245f-4cc8-84e0-c84b007c32ae@magic-munich
-DTSTAMP:20260320T133814
+UID:f2453708-1e14-43a2-bbd4-d543342c2fca@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260805T180000
 DTEND:20260805T210000
 SUMMARY:Magic Modern Turnier
@@ -1103,48 +213,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:97eef2d0-3c87-4882-8268-e47ea9fa389d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260805T180000
-DTEND:20260805T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:d5eef60e-363c-46f9-b3fe-13e7fce9384d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260806T150000
-DTEND:20260806T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:bf6f446b-0d0e-436d-b561-47e898a7b809@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260811T180000
-DTEND:20260811T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:b7fca462-85f4-4dd4-b652-9529f3ec47c6@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260811T180000
-DTEND:20260811T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:1f8cd435-3eed-431b-8e27-c3ee5dd2fe9d@magic-munich
-DTSTAMP:20260320T133814
+UID:d0301ff0-744a-438b-abd4-e69ff7fc20ea@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260812T180000
 DTEND:20260812T210000
 SUMMARY:Magic Modern Turnier
@@ -1153,58 +223,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:106021e8-ba49-401f-8c0d-23c9e42ff82a@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260812T180000
-DTEND:20260812T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:898599c4-d8e8-44e4-90fc-4802c1f4c0fe@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260813T150000
-DTEND:20260813T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:359f0de5-e0d5-4323-8702-12aaa704c979@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260818T180000
-DTEND:20260818T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:6e322df5-83f6-44bc-acc9-0efe761a256c@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260818T180000
-DTEND:20260818T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:5abba895-7dba-4c17-9305-39aaa30706a9@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260819T180000
-DTEND:20260819T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:53aadf03-6b25-47b9-addc-0d820a885f83@magic-munich
-DTSTAMP:20260320T133814
+UID:a9fd2c08-9229-468b-a2f7-c5617fa94ed2@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260819T180000
 DTEND:20260819T210000
 SUMMARY:Magic Modern Turnier
@@ -1213,48 +233,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:2a94c6da-7322-4636-8d75-abdc1a322912@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260820T150000
-DTEND:20260820T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:11ee77c1-0084-4f37-977b-2d72a70ad3b7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260825T180000
-DTEND:20260825T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:435b2b09-0cae-459f-a57f-71bd7eaf73bb@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260825T180000
-DTEND:20260825T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:abcce216-9b09-4ccb-bbbb-f54fe29bb916@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260826T180000
-DTEND:20260826T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:c472f9d2-ecfb-4006-a63b-3e484ab8331f@magic-munich
-DTSTAMP:20260320T133814
+UID:0d7c32ce-941a-41b0-bd44-dfe2875e3ff0@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260826T180000
 DTEND:20260826T210000
 SUMMARY:Magic Modern Turnier
@@ -1263,48 +243,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:1ed48cf3-d753-431c-a0cb-0aae3d2a2424@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260827T150000
-DTEND:20260827T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:98546cb3-4095-440e-b30d-49faeb0b4420@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260901T180000
-DTEND:20260901T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:7423817c-da22-4c6c-8293-e62cd1edf155@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260901T180000
-DTEND:20260901T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:c8e20e26-1bd4-49e0-b967-8cc602b252e7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260902T180000
-DTEND:20260902T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:b99c0847-a61b-4d57-82f8-32d3531eb2c7@magic-munich
-DTSTAMP:20260320T133814
+UID:58187c4e-7503-4a91-840b-9d661caa97c0@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260902T180000
 DTEND:20260902T210000
 SUMMARY:Magic Modern Turnier
@@ -1313,48 +253,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:764d8b64-4c1f-4c3b-be90-a872a55cda50@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260903T150000
-DTEND:20260903T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:9e362841-5157-4065-9c47-12bdda58ed54@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260908T180000
-DTEND:20260908T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:ad527a87-c408-41fb-a4b0-b8202e6c261e@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260908T180000
-DTEND:20260908T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:83607304-07e4-4182-925e-fbfe96d6364a@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260909T180000
-DTEND:20260909T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:1e0a2b6e-a0a1-41ca-8903-16065879ecac@magic-munich
-DTSTAMP:20260320T133814
+UID:8e68286e-3328-42b8-8add-9d8085935ff9@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260909T180000
 DTEND:20260909T210000
 SUMMARY:Magic Modern Turnier
@@ -1363,48 +263,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:193274f4-c0e5-44bd-b2be-cecd9a1bcb49@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260910T150000
-DTEND:20260910T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:5f88b457-e933-48ab-958d-2d0867262dd5@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260915T180000
-DTEND:20260915T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:f9a8bd3f-1af0-4a07-9daf-44f350575e9f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260915T180000
-DTEND:20260915T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:7118e7ec-fbe3-45a8-a4cc-8bebb2c51860@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260916T180000
-DTEND:20260916T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:5080418a-2295-4bc5-b686-1536c2fe6c29@magic-munich
-DTSTAMP:20260320T133814
+UID:a6e6a2dc-27ef-4045-ae4c-b9be0925e31a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260916T180000
 DTEND:20260916T210000
 SUMMARY:Magic Modern Turnier
@@ -1413,48 +273,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:a472583b-92e1-43a6-8638-c214b47e3412@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260917T150000
-DTEND:20260917T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:981d2dea-fba6-4930-84bd-f36924de8b4c@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260922T180000
-DTEND:20260922T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:31f8604b-02f4-46b0-b7de-8115d8750b69@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260922T180000
-DTEND:20260922T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:d47339e4-5220-4241-83b7-7adfff476c34@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260923T180000
-DTEND:20260923T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:9a862cc3-545f-4807-bd9e-746afa3bec5a@magic-munich
-DTSTAMP:20260320T133814
+UID:1562abac-a71e-4b93-93ce-e106bea984fb@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260923T180000
 DTEND:20260923T210000
 SUMMARY:Magic Modern Turnier
@@ -1463,48 +283,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:384e0a84-957d-4113-8043-995254b76346@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260924T150000
-DTEND:20260924T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:8039fdcb-8253-48ad-9f62-5476d537473d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260929T180000
-DTEND:20260929T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:8aad3141-cce9-4626-b8d2-4b585e0448be@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260929T180000
-DTEND:20260929T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:fa382c15-853c-4d6e-9ae8-e21de5a0d8ac@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260930T180000
-DTEND:20260930T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:15668a00-e265-4f0a-8f81-864e668d8cf2@magic-munich
-DTSTAMP:20260320T133814
+UID:87ebf75f-663b-483d-b8d6-94a6086f6ca7@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260930T180000
 DTEND:20260930T210000
 SUMMARY:Magic Modern Turnier
@@ -1513,48 +293,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:8934cdb4-bdcc-4807-ba5f-c26956597d1b@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261001T150000
-DTEND:20261001T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:5233c277-69ad-495e-84da-d9dbfeabc6f0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261006T180000
-DTEND:20261006T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:1c572e9e-4bfa-4c83-a2ad-fd7748e9cbc1@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261006T180000
-DTEND:20261006T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:d3272a33-350c-40b4-b960-f35e7f925eab@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261007T180000
-DTEND:20261007T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:b0dba352-d91a-4614-8259-615ad3df464d@magic-munich
-DTSTAMP:20260320T133814
+UID:afdafd27-6a46-4fee-8d68-9b37ba547f4a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261007T180000
 DTEND:20261007T210000
 SUMMARY:Magic Modern Turnier
@@ -1563,48 +303,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:d5e6e652-7834-4d0b-bec4-0330bc47f6aa@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261008T150000
-DTEND:20261008T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:820a3f78-2c70-4104-8452-cfa57989eba5@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261013T180000
-DTEND:20261013T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:4b7ccb88-1d3b-43a0-a495-03046b67729c@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261013T180000
-DTEND:20261013T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:6647be51-a23d-458a-81b5-b3e156600774@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261014T180000
-DTEND:20261014T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:c28f540a-7d5a-476e-8e33-0f455902c23d@magic-munich
-DTSTAMP:20260320T133814
+UID:d620b474-8cd5-46ec-8f37-011bbac63ec8@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261014T180000
 DTEND:20261014T210000
 SUMMARY:Magic Modern Turnier
@@ -1613,38 +313,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:0a933522-e01e-47fe-92bf-ae6aaf9c4e24@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261015T150000
-DTEND:20261015T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:4aa3bcb5-68c6-4ffd-8119-cb5b1193adc5@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261020T180000
-DTEND:20261020T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:46f9cefc-c68c-4b4c-bac6-dc2c39de3bf7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261020T180000
-DTEND:20261020T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:81184186-9188-4772-8aed-1737237800f0@magic-munich
-DTSTAMP:20260320T133814
+UID:6f383bc2-4dff-4459-af4f-99fd1084bc2a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261021T180000
 DTEND:20261021T210000
 SUMMARY:Magic Modern Turnier
@@ -1653,58 +323,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:8e10e88f-478b-40fb-a3b9-290c98d9a153@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261021T180000
-DTEND:20261021T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:9ff95009-a8c5-41b5-8593-8783b65ab23f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261022T150000
-DTEND:20261022T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:543b34d0-ce4c-4cd9-b3de-81389c48644b@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261027T180000
-DTEND:20261027T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:7342c47a-dd42-43cb-9bd5-cc6239f50b4d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261027T180000
-DTEND:20261027T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:19ed2e55-2827-4deb-8d37-cb97e0d2167b@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261028T180000
-DTEND:20261028T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:ec438931-0e27-4e41-9f6d-c9b1f6c8ea32@magic-munich
-DTSTAMP:20260320T133814
+UID:60c621ee-a2b1-4798-9d6b-aceddaa55be4@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261028T180000
 DTEND:20261028T210000
 SUMMARY:Magic Modern Turnier
@@ -1713,48 +333,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:79ced13d-7367-47c3-ae02-d55df12a5b79@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261029T150000
-DTEND:20261029T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:192ec52b-916b-4d4a-8ca6-c5d1dc1c8e7e@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261103T180000
-DTEND:20261103T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:90cd33c2-23e1-4c16-8229-2e20348003ff@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261103T180000
-DTEND:20261103T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:975aab39-6c54-4a93-8ccb-62a4f8886990@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261104T180000
-DTEND:20261104T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:666796dd-a655-4595-92b0-d5e4a602fc95@magic-munich
-DTSTAMP:20260320T133814
+UID:1c33da11-ef36-4450-99c3-8b8cf8fcad91@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261104T180000
 DTEND:20261104T210000
 SUMMARY:Magic Modern Turnier
@@ -1763,48 +343,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:c6d5376a-d4ed-437d-847d-d36c567ada77@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261105T150000
-DTEND:20261105T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:615861f9-06ec-4dff-b96a-3919a1e89dd8@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261110T180000
-DTEND:20261110T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:bdde1159-f61b-4ead-8805-21e7717233b4@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261110T180000
-DTEND:20261110T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:60cc7ff1-b943-4fcd-bd53-9befe7286dd5@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261111T180000
-DTEND:20261111T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:6fa40ba8-dd5b-4c84-a641-e8e318f3fe5c@magic-munich
-DTSTAMP:20260320T133814
+UID:8af77022-97d3-4b00-9ee9-86fa8de51546@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261111T180000
 DTEND:20261111T210000
 SUMMARY:Magic Modern Turnier
@@ -1813,48 +353,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:2f9fbbc8-e405-4c7d-8158-dfd3a4ff32e9@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261112T150000
-DTEND:20261112T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:f25b90b3-52ff-4660-a07b-a932ed1f0cf8@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261117T180000
-DTEND:20261117T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:540cada5-0a10-4871-b5d8-9b426ae45e67@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261117T180000
-DTEND:20261117T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:18a0b181-f265-4cae-a4b7-9bd5c1ed33b6@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261118T180000
-DTEND:20261118T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:63692067-a03c-490d-9274-5b3a15819278@magic-munich
-DTSTAMP:20260320T133814
+UID:b4678552-122d-4e15-a900-77b1d670ccdf@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261118T180000
 DTEND:20261118T210000
 SUMMARY:Magic Modern Turnier
@@ -1863,48 +363,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:b9579eb9-2232-4b8e-94f2-0ef86a80d632@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261119T150000
-DTEND:20261119T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:18245353-e185-4c71-99e9-367d96efe6c4@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261124T180000
-DTEND:20261124T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:8ab3ba58-2a11-4a41-a2eb-da7d91b90e4c@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261124T180000
-DTEND:20261124T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:4ca0e246-5e92-42dd-8d6f-e32460d572d4@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261125T180000
-DTEND:20261125T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:1ebc6483-12e5-4c50-a571-8fc055b0afad@magic-munich
-DTSTAMP:20260320T133814
+UID:486923f0-875c-4428-a682-354d10efa14a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261125T180000
 DTEND:20261125T210000
 SUMMARY:Magic Modern Turnier
@@ -1913,48 +373,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:066e0d14-016a-4868-8eee-80e0d3b0c51f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261126T150000
-DTEND:20261126T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:ea3b76b2-d6fc-41a8-b923-f4fea93da9ef@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261201T180000
-DTEND:20261201T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:5a4ba822-c051-4826-9479-063ca29b868f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261201T180000
-DTEND:20261201T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:55a35e00-baaf-42e3-8414-3932434a25cf@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261202T180000
-DTEND:20261202T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:a1d1937f-9e48-4039-b5ba-ddd35b7667c7@magic-munich
-DTSTAMP:20260320T133814
+UID:0a7fdc8f-a400-4cc2-8072-37903f6ce176@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261202T180000
 DTEND:20261202T210000
 SUMMARY:Magic Modern Turnier
@@ -1963,48 +383,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:5098607e-1194-4533-840f-4bf451a39498@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261203T150000
-DTEND:20261203T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:1ea3d728-2092-4964-a6b8-507c6fc764a7@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261208T180000
-DTEND:20261208T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:d2b62b83-4bb7-4504-ae5e-fbca3037bacb@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261208T180000
-DTEND:20261208T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:b4353961-bfb7-431f-a493-502e1ca11d92@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261209T180000
-DTEND:20261209T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:bd46bd11-9164-4c11-aa89-23f5590db1d2@magic-munich
-DTSTAMP:20260320T133814
+UID:992e5c9d-ff51-4dbe-8cf3-7078d8da842a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261209T180000
 DTEND:20261209T210000
 SUMMARY:Magic Modern Turnier
@@ -2013,48 +393,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:d535a0c2-a9c7-4a68-8dde-8610052816ea@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261210T150000
-DTEND:20261210T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:9bdae2d6-c5e2-43dd-aeb8-fdd92aab6a96@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261215T180000
-DTEND:20261215T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:8420c2a7-ff8c-4714-85d1-1540b61e0fc0@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261215T180000
-DTEND:20261215T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:5872e522-b2d2-4a41-a586-bf9f3fc094fd@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261216T180000
-DTEND:20261216T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:8826d307-fc89-44e9-b29e-32b15c64b695@magic-munich
-DTSTAMP:20260320T133814
+UID:de098cbd-9c66-4c8f-aa18-97d0db8b90e4@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261216T180000
 DTEND:20261216T210000
 SUMMARY:Magic Modern Turnier
@@ -2063,48 +403,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:01bab445-1496-4065-88bc-086dcaf0db7d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261217T150000
-DTEND:20261217T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:a08a71eb-3183-4093-93ab-f9cc0e3d54fe@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261222T180000
-DTEND:20261222T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:cc409559-4348-498a-9214-fdb9cde31ccf@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261222T180000
-DTEND:20261222T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:2ee96e18-955b-49cf-8a75-4b850b603a20@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261223T180000
-DTEND:20261223T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:93fa0a68-1bca-4857-aa79-a83bb991b635@magic-munich
-DTSTAMP:20260320T133814
+UID:2c6b9714-de30-47b7-8960-77ba38e8ac51@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261223T180000
 DTEND:20261223T210000
 SUMMARY:Magic Modern Turnier
@@ -2113,38 +413,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:89d0981f-d71b-4d1a-a3f9-ec284042364d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261224T150000
-DTEND:20261224T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:8f53658b-cad4-4487-8b73-8d28fbc1ca63@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261229T180000
-DTEND:20261229T210000
-SUMMARY:Magic Legacy Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:6c7f651e-449f-4686-a9f8-bb7b94637548@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261229T180000
-DTEND:20261229T210000
-SUMMARY:Magic Standard Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt.
-END:VEVENT
-BEGIN:VEVENT
-UID:8d8b755f-02fa-43f4-a883-ba2d10e9f773@magic-munich
-DTSTAMP:20260320T133814
+UID:aa0c456b-664c-4067-82fc-f202ba38a32c@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20261230T180000
 DTEND:20261230T210000
 SUMMARY:Magic Modern Turnier
@@ -2153,68 +423,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Keine Voranmeldung erforderlich. Teilnahmegebühr €12. Es werden 3 Runden gespielt
 END:VEVENT
 BEGIN:VEVENT
-UID:9ef83f97-8607-417b-92f0-cffb18065522@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261230T180000
-DTEND:20261230T210000
-SUMMARY:Magic Liga Turnier
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Hol dir ein Ligadeck und starte sofort durch - Kostenloses Magic Turnier (Best of One), perfekt für Einsteiger.
-END:VEVENT
-BEGIN:VEVENT
-UID:0e43cfe4-5380-49fb-9552-5d810bd8047d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20261231T150000
-DTEND:20261231T180000
-SUMMARY:Commander Treff
-LOCATION:BB-Spiele
-URL:https://www.bb-spiele.de
-DESCRIPTION:Keine Voranmeldung erforderlich. 10€ Teilnahmegebühr. Erhalte ein aktuelles Play-Booster & ein Freigetränk.
-END:VEVENT
-BEGIN:VEVENT
-UID:b7a32210-40ec-4d24-bb1f-01b866589df1@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T170000
-DTEND:20260320T200000
-SUMMARY:Friday Night Magic: Commander
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:2efb4f52-a4b3-45d7-89e3-d203bafaf82c@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T170000
-DTEND:20260320T200000
-SUMMARY:Friday Night Magic: Draft mit Boosterguthaben
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:8df72f15-bd10-4dea-92c9-76ae11a7bd7d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T170000
-DTEND:20260320T200000
-SUMMARY:Friday Night Magic: Draft
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:6ebc067d-68a2-45cd-8287-a08843df2cee@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T170000
-DTEND:20260320T200000
-SUMMARY:Friday Night Magic: Legacy
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:a1c6a099-7915-4855-8f14-c6cf47acaa48@magic-munich
-DTSTAMP:20260320T133814
+UID:2af03487-d384-46eb-a470-2bbdf19ef30c@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260320T170000
 DTEND:20260320T200000
 SUMMARY:Friday Night Magic: Modern
@@ -2223,38 +433,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:a1edc6c0-3fc9-4eda-b3b1-e1fbc41724d6@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T170000
-DTEND:20260320T200000
-SUMMARY:Friday Night Magic: Standard Showdown
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:e5981cdf-699e-4433-bc78-20288f375204@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260320T170000
-DTEND:20260320T200000
-SUMMARY:Magic Academy: Learn to Play
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Learn to Play Event – Lerne jetzt das Spiel!
-END:VEVENT
-BEGIN:VEVENT
-UID:d0493aa3-55b0-4aa8-9538-a9d6b4cfb749@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260327T160000
-DTEND:20260327T190000
-SUMMARY:Friday Night Magic: Commander
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:db94688d-f0ec-48bf-9a5b-54cff290f93c@magic-munich
-DTSTAMP:20260320T133814
+UID:bc81e550-2362-4343-9c50-9544c20508e1@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260327T170000
 DTEND:20260327T200000
 SUMMARY:Friday Night Magic: Modern
@@ -2263,118 +443,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:32d84e95-e35a-4193-aa87-1f2d13061664@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260327T170000
-DTEND:20260327T200000
-SUMMARY:Friday Night Magic: Standard Showdown
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:e6e0f60b-dcfe-4bf4-853f-979d3ca1960c@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260327T170000
-DTEND:20260327T200000
-SUMMARY:It's Turtle Time! Pick 2 Draft
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:75f436c1-7fe1-4d54-b951-2b83a35c326b@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260327T170000
-DTEND:20260327T200000
-SUMMARY:Magic Academy: Learn to Play
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Learn to Play Event – Lerne jetzt das Spiel!
-END:VEVENT
-BEGIN:VEVENT
-UID:b2f6ddfa-a3e3-40ff-ade9-5e6ad5ba5c0f@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260327T170000
-DTEND:20260327T200000
-SUMMARY:Friday Night Magic: Legacy
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:978d9576-80d8-4e71-bbae-c7272f4c2b7a@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260328T110000
-DTEND:20260328T140000
-SUMMARY:Magic: Chaos Draft
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:b5ec5fdb-fd83-4ed5-9b0d-4a037ed03fce@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260402T163000
-DTEND:20260402T193000
-SUMMARY:Magic Academy: Learn to Play
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Learn to Play Event – Lerne jetzt das Spiel!
-END:VEVENT
-BEGIN:VEVENT
-UID:7c39c66a-bd24-48af-aabe-48798308f792@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260402T170000
-DTEND:20260402T200000
-SUMMARY:TMNT Commander Party
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:98366022-9cae-416a-adee-dde998be80ab@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260402T170000
-DTEND:20260402T200000
-SUMMARY:It's Turtle Time! Pick 2 Draft
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:874b1c5d-5af1-4076-90df-d620ec4b4951@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260410T163000
-DTEND:20260410T193000
-SUMMARY:Magic Academy: Learn to Play
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Learn to Play Event – Lerne jetzt das Spiel!
-END:VEVENT
-BEGIN:VEVENT
-UID:608651f9-0731-417f-9160-e4a3a8970b84@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260410T170000
-DTEND:20260410T200000
-SUMMARY:It's Turtle Time! Pick 2 Draft
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:9643663b-401c-4283-9547-ae0ef641c8b6@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260410T170000
-DTEND:20260410T200000
-SUMMARY:Friday Night Magic: Legacy
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:8a40a406-620d-4a01-8d6d-713a0689b7ba@magic-munich
-DTSTAMP:20260320T133814
+UID:a0bfeb4e-85c7-470e-920a-7d044dd6b5bd@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260410T170000
 DTEND:20260410T200000
 SUMMARY:Friday Night Magic: Modern
@@ -2383,78 +453,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:5ec59f36-86e7-4e8b-9924-4e227f779ebf@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260410T170000
-DTEND:20260410T200000
-SUMMARY:Friday Night Magic: Commander
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:21b61189-5189-49ad-809f-5111c22dbf67@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260410T170000
-DTEND:20260410T200000
-SUMMARY:Friday Night Magic: Standard Showdown
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:f6e92b99-539c-422a-80d0-2f5ba7873bac@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T150000
-DTEND:20260417T180000
-SUMMARY:Prerelease - Secrets of Strixhaven 15:00 Uhr
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:71369d1b-b818-4679-bc7b-3090672edc62@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T163000
-DTEND:20260417T193000
-SUMMARY:Magic Academy: Learn to Play
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Learn to Play Event – Lerne jetzt das Spiel!
-END:VEVENT
-BEGIN:VEVENT
-UID:37fa5edc-cfff-4fc1-97ee-999d88a82c23@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T170000
-DTEND:20260417T200000
-SUMMARY:Friday Night Magic: Standard Showdown
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:1c51fcfa-fdfc-4634-a1c5-b22d74a59eeb@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T170000
-DTEND:20260417T200000
-SUMMARY:Prerelease - Secrets of Strixhaven 17:00 Uhr
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:1e0adc45-4338-4230-9400-675f9c6c5002@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T170000
-DTEND:20260417T200000
-SUMMARY:Friday Night Magic: Legacy
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:6b177e23-ecb9-4bd5-89e6-7932a627ad5b@magic-munich
-DTSTAMP:20260320T133814
+UID:7668506a-e897-4d51-8d64-f29e15951fbd@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260417T170000
 DTEND:20260417T200000
 SUMMARY:Friday Night Magic: Modern
@@ -2463,128 +463,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:dc1bf843-1183-405f-baf6-f4cd73567efc@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260417T170000
-DTEND:20260417T200000
-SUMMARY:Friday Night Magic: Commander
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:b59ae50e-bcdb-44e5-84b0-6507c9b88b41@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260418T100000
-DTEND:20260418T130000
-SUMMARY:Prerelease - Secrets of Strixhaven 10:00 Uhr
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:87e170f0-70c8-43cf-b45a-391b4b7da10d@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260418T120000
-DTEND:20260418T150000
-SUMMARY:2HG Prerelease - Secrets of Strixhaven 12:00 Uhr
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:b33a29b1-d205-44da-a712-cb7adc5eb8d1@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260418T140000
-DTEND:20260418T170000
-SUMMARY:Prerelease - Secrets of Strixhaven 14:00 Uhr
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:d3442bc4-10f1-4a47-a501-49cf4167e7ce@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260419T110000
-DTEND:20260419T140000
-SUMMARY:Prerelease - Secrets of Strixhaven Krailling
-LOCATION:Krailling
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:0f81d394-dd46-4a2f-9f81-f9ec8c2e1731@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260419T140000
-DTEND:20260419T170000
-SUMMARY:Prerelease - Secrets of Strixhaven Krailling
-LOCATION:Krailling
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:d974c2b7-e8ab-40c8-b116-28993fd1a260@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260419T140000
-DTEND:20260419T170000
-SUMMARY:2HG Prerelease - Secrets of Strixhaven Krailling
-LOCATION:Krailling
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:c5689df7-e9fb-4eb4-b337-a0ac30bc1b20@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260424T163000
-DTEND:20260424T193000
-SUMMARY:Magic Academy: Learn to Play
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Learn to Play Event – Lerne jetzt das Spiel!
-END:VEVENT
-BEGIN:VEVENT
-UID:d55ec51b-f1c7-497b-9b75-ca225beefb88@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260424T170000
-DTEND:20260424T200000
-SUMMARY:Friday Night Magic: Draft
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:91669593-b651-4ba1-8780-53f010b152dd@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260424T170000
-DTEND:20260424T200000
-SUMMARY:Friday Night Magic: Standard Showdown
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:eab2f702-1956-48a7-93f9-990ceef50315@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260424T170000
-DTEND:20260424T200000
-SUMMARY:Friday Night Magic: Draft mit Boosterguthaben
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:f275d7d8-e209-484d-83c1-10eaf4cbd010@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260424T170000
-DTEND:20260424T200000
-SUMMARY:Friday Night Magic: Legacy
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:a61b38aa-d16f-4730-9f62-18783673341d@magic-munich
-DTSTAMP:20260320T133814
+UID:e7cf1852-fa9c-431a-8708-b6902192dd80@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260424T170000
 DTEND:20260424T200000
 SUMMARY:Friday Night Magic: Modern
@@ -2593,18 +473,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:34ce6314-f0ed-4725-88d2-a68df5676dab@magic-munich
-DTSTAMP:20260320T133814
-DTSTART:20260424T170000
-DTEND:20260424T200000
-SUMMARY:Friday Night Magic: Commander
-LOCATION:FUNtainment München
-URL:https://www.funtainment.de
-DESCRIPTION:Buche Deinen Platz für dieses Event
-END:VEVENT
-BEGIN:VEVENT
-UID:e8d26dfc-96ee-40ea-bfd8-cad78dc70fcb@magic-munich
-DTSTAMP:20260320T133814
+UID:8d4b86fd-55df-4b09-98ed-573b69dbfa0a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260223T190000
 DTEND:20260223T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -2613,8 +483,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:dea2b416-5198-4a7f-9c78-3815bd69b1d1@magic-munich
-DTSTAMP:20260320T133814
+UID:062c77f4-f148-4e4f-88de-6ed2216f707e@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260224T184500
 DTEND:20260224T214500
 SUMMARY:Afterwork - Riftbound -Nexus Night
@@ -2623,8 +493,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:44210151-2c92-47f4-a670-428bdb176b61@magic-munich
-DTSTAMP:20260320T133814
+UID:c075ee11-3fd6-4e21-a812-d84725ecc386@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260225T173000
 DTEND:20260225T203000
 SUMMARY:After-Work Commander
@@ -2633,8 +503,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:cdfa4300-89bf-49a4-8aa3-90b6ac172cc7@magic-munich
-DTSTAMP:20260320T133814
+UID:d2806075-f968-4de2-b937-7cbc9e0fead9@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260226T184500
 DTEND:20260226T214500
 SUMMARY:Aftework - 40k
@@ -2643,8 +513,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:bb34b0c6-67b6-4dfd-9309-8cf4c86a85f1@magic-munich
-DTSTAMP:20260320T133814
+UID:fc3f83d3-bc9f-4c9f-8e3e-89fdd47cbecc@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260227T173000
 DTEND:20260227T203000
 SUMMARY:Friday Night Commander
@@ -2653,8 +523,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:846af4b2-6566-484d-aeca-b08678862d0e@magic-munich
-DTSTAMP:20260320T133814
+UID:c10704b3-2442-4fdb-908d-aff293c2cc55@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260302T190000
 DTEND:20260302T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -2663,8 +533,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:d923d7b9-ca37-48c7-a812-fd2fd12a302a@magic-munich
-DTSTAMP:20260320T133814
+UID:9096dcf9-ace9-4747-9843-ccc3e95474d5@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260303T184500
 DTEND:20260303T214500
 SUMMARY:Afterwork - Riftbound -Nexus Night
@@ -2673,8 +543,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:558b6bc0-8ba1-4214-b2c5-c17d4b05b1c2@magic-munich
-DTSTAMP:20260320T133814
+UID:d2a46a45-3498-4fa6-8625-b86c93cdf705@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260304T173000
 DTEND:20260304T203000
 SUMMARY:After-Work Commander
@@ -2683,8 +553,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:a7c6cdef-fa55-4d34-9a37-12e0cf84e0fb@magic-munich
-DTSTAMP:20260320T133814
+UID:ee949968-0439-4c0f-b830-7044aab7b8e2@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260305T184500
 DTEND:20260305T214500
 SUMMARY:Aftework - 40k
@@ -2693,8 +563,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:e7a3c832-60d5-4fe1-afb7-4d01bea57103@magic-munich
-DTSTAMP:20260320T133814
+UID:8be59b25-f920-4418-be7b-dda026006025@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260306T173000
 DTEND:20260306T203000
 SUMMARY:Friday Night Commander
@@ -2703,8 +573,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:b520a99e-7ac4-45ca-9adc-d411d172ee3b@magic-munich
-DTSTAMP:20260320T133814
+UID:7a3c2c18-ba04-4634-bff3-17f84e32e0fd@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260309T190000
 DTEND:20260309T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -2713,8 +583,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:3a2dee33-4809-4e3c-abec-5976e5c65468@magic-munich
-DTSTAMP:20260320T133814
+UID:0ee5ab91-ed67-48d2-8055-9e2362c6ef9f@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260310T184500
 DTEND:20260310T214500
 SUMMARY:Afterwork - Riftbound -Nexus Night
@@ -2723,8 +593,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:19609d10-1d4c-4dee-a4ef-5776a316e298@magic-munich
-DTSTAMP:20260320T133814
+UID:09c5d396-b181-4ccc-bcdc-0eab2d00e55b@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260311T173000
 DTEND:20260311T203000
 SUMMARY:After-Work Commander
@@ -2733,8 +603,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:d3c694b1-841f-4586-8e08-e9f547be5550@magic-munich
-DTSTAMP:20260320T133814
+UID:1fa610b3-f737-4f55-a175-97bb9e9f5776@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260312T184500
 DTEND:20260312T214500
 SUMMARY:Aftework - 40k
@@ -2743,8 +613,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:6f41dcf9-8ea4-4341-95c1-d6ca6dbc0c29@magic-munich
-DTSTAMP:20260320T133814
+UID:46744bc6-648c-4878-8044-133bd7dee67a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260313T173000
 DTEND:20260313T203000
 SUMMARY:Friday Night Commander
@@ -2753,8 +623,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:3d71a26d-7dbd-4903-9225-3f5defe2818b@magic-munich
-DTSTAMP:20260320T133814
+UID:48b85cdb-384d-4420-a133-10819459fa78@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260314T100000
 DTEND:20260314T130000
 SUMMARY:Warhammer 40k Team Turnier II
@@ -2763,8 +633,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:1c7b11cf-3126-4824-a044-295392abac33@magic-munich
-DTSTAMP:20260320T133814
+UID:f38fcc20-2dcb-422b-a7ce-d943ec3a2d42@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260316T190000
 DTEND:20260316T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -2773,8 +643,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:8f6992d8-2f97-4131-a39b-f2cb6f21b11f@magic-munich
-DTSTAMP:20260320T133814
+UID:b1e85a06-86e9-4fdf-b236-705fc71a19c6@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260317T184500
 DTEND:20260317T214500
 SUMMARY:Afterwork - Riftbound -Nexus Night
@@ -2783,8 +653,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:b8e5434f-909c-4ca8-ab95-784e3c507271@magic-munich
-DTSTAMP:20260320T133814
+UID:f840b381-f1da-46ad-9058-ff439bb001fe@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260318T173000
 DTEND:20260318T203000
 SUMMARY:After-Work Commander
@@ -2793,8 +663,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:dc3ce2da-7c90-4a8e-8657-0679204b6067@magic-munich
-DTSTAMP:20260320T133814
+UID:66744cb0-4ff2-488b-81de-aeb57ca7e020@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260319T184500
 DTEND:20260319T214500
 SUMMARY:Aftework - 40k
@@ -2803,8 +673,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:13916d1a-8d21-4769-837a-e2342c082fa2@magic-munich
-DTSTAMP:20260320T133814
+UID:c0987cd5-9c66-4fa9-9d41-1ab14ff21c3a@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260320T173000
 DTEND:20260320T203000
 SUMMARY:Friday Night Commander
@@ -2813,8 +683,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:1a5e98d9-4a10-49cd-ae27-282baa1283b3@magic-munich
-DTSTAMP:20260320T133814
+UID:257f539a-432f-4788-b07d-0b7d2b24f472@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260321T120000
 DTEND:20260321T150000
 SUMMARY:SpearWars V Spearhead
@@ -2823,8 +693,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:056b308d-0e79-4720-894a-ce7c142be411@magic-munich
-DTSTAMP:20260320T133814
+UID:b1173534-456c-45f6-9bd1-ef5625bd7411@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260323T190000
 DTEND:20260323T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -2833,8 +703,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:566111a9-39ad-46b6-a840-478c209857d9@magic-munich
-DTSTAMP:20260320T133814
+UID:5e2584f2-4c41-47e2-97d3-fb671d9f18d7@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260324T184500
 DTEND:20260324T214500
 SUMMARY:Afterwork - Riftbound -Nexus Night
@@ -2843,8 +713,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:22cef0f7-6c97-4eda-b0a9-cccd13b95834@magic-munich
-DTSTAMP:20260320T133814
+UID:3220016c-e845-418f-84ab-f5a161f1b0af@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260325T173000
 DTEND:20260325T203000
 SUMMARY:After-Work Commander
@@ -2853,8 +723,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:23286dff-184a-4aef-9a7e-90c34f2a0dde@magic-munich
-DTSTAMP:20260320T133814
+UID:76038f6b-d9f3-4869-a908-28237d32f063@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260326T184500
 DTEND:20260326T214500
 SUMMARY:Aftework - 40k
@@ -2863,8 +733,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:1db48768-9397-43c4-896f-2e373b51b7f5@magic-munich
-DTSTAMP:20260320T133814
+UID:ac57fad6-e5c4-4f1c-8744-b74312384e41@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260327T173000
 DTEND:20260327T203000
 SUMMARY:Friday Night Commander
@@ -2873,8 +743,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:ff24ebc2-603c-40ae-858b-88a3982c6c36@magic-munich
-DTSTAMP:20260320T133814
+UID:bae3acb4-2a9b-4cf8-9134-add7d5a4affe@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260328T103000
 DTEND:20260328T133000
 SUMMARY:MtG Anfänger Turnier am Unterföhringer Spieletag
@@ -2883,8 +753,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:7560b714-8113-4bde-92e0-7a09886e0140@magic-munich
-DTSTAMP:20260320T133814
+UID:e2bdec6a-c9f9-437b-996c-50aa3b3640fe@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260330T190000
 DTEND:20260330T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -2893,8 +763,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:ea41ca46-539b-4772-8d4d-859bfe703154@magic-munich
-DTSTAMP:20260320T133814
+UID:99120b66-2a97-4a0b-a7a3-37daecff44d1@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260331T184500
 DTEND:20260331T214500
 SUMMARY:Afterwork - Riftbound -Nexus Night
@@ -2903,8 +773,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:1eeb4dae-e110-4f9a-abdc-943ee1753a23@magic-munich
-DTSTAMP:20260320T133814
+UID:c6d13ee2-5945-4f83-81d4-1b58f7167a59@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260401T173000
 DTEND:20260401T203000
 SUMMARY:After-Work Commander
@@ -2913,8 +783,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:220cf2ed-63f0-411a-b3da-2637341a85c0@magic-munich
-DTSTAMP:20260320T133814
+UID:6173a6e4-0bac-4360-8e4d-11e3bc7c7a98@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260402T184500
 DTEND:20260402T214500
 SUMMARY:Aftework - 40k
@@ -2923,8 +793,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:7a761ddf-850a-4adf-ad51-70219aac9a39@magic-munich
-DTSTAMP:20260320T133814
+UID:68ad00cf-2192-4233-8347-3d24edc6306f@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260403T173000
 DTEND:20260403T203000
 SUMMARY:Friday Night Commander
@@ -2933,8 +803,8 @@ URL:https://www.dd-munich.de/event-list
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:2b4c3018-8e26-43ae-a1da-aad6f794afc2@magic-munich
-DTSTAMP:20260320T133814
+UID:537f3b1b-0d82-4f1b-a021-b85bf82ea479@magic-munich
+DTSTAMP:20260320T154817
 DTSTART:20260404T100000
 DTEND:20260404T130000
 SUMMARY:Mal-Workshop Grundlagen mit Chewie Painting
