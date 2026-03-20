@@ -1,10 +1,10 @@
 import requests
-from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
-import re
 
 TZ = ZoneInfo("Europe/Berlin")
+
+API_URL = "https://www.dd-munich.de/_api/wix-one-events-server/web/paginated-events/viewer"
 
 # ---------------------------------------------------------
 # Modern/RCQ Filter (Premodern ausgeschlossen!)
@@ -63,123 +63,102 @@ def is_modern_or_rcq(title: str) -> bool:
 
 
 # ---------------------------------------------------------
-# Uhrzeit extrahieren
+# API Pagination
 # ---------------------------------------------------------
-def extract_time(text: str):
-    text = text.lower()
+def fetch_all_events():
+    print("\n--- DEBUG: API Pagination ---")
 
-    m = re.search(r"(\d{1,2})[:\.](\d{2})", text)
-    if m:
-        return int(m.group(1)), int(m.group(2))
+    offset = 0
+    limit = 16
+    all_events = []
 
-    m = re.search(r"(\d{1,2})\s*uhr", text)
-    if m:
-        return int(m.group(1)), 0
-
-    return None
-
-
-# ---------------------------------------------------------
-# Modern-Events aus dem Wix Event Widget
-# ---------------------------------------------------------
-def fetch_widget_modern_events(soup):
-    print("\n--- DEBUG: Widget-Parsing ---")
-
-    events = []
-    cards = soup.select('[data-hook="events-card"]')
-    print(f"Gefundene Event-Cards: {len(cards)}")
-
-    for card in cards:
-        title_el = card.select_one('[data-hook="title"]')
-        date_el = card.select_one('[data-hook="date"]')
-
-        if not title_el or not date_el:
-            continue
-
-        title = title_el.get_text(strip=True)
-        date_text = date_el.get_text(strip=True)
-
-        print(f"  → Card: '{title}' | Datum: '{date_text}'")
-
-        if not is_modern_or_rcq(title):
-            print("    ✗ Filter: kein Modern/RCQ")
-            continue
-
-        # Beispiel: "20. März 2026, 18:30 – 23:00"
-        m = re.match(r"(\d{1,2})\. (\w+) (\d{4}), (\d{1,2}:\d{2})", date_text)
-        if not m:
-            print("    ✗ Datum/Uhrzeit nicht erkannt")
-            continue
-
-        day = int(m.group(1))
-        month_name = m.group(2).lower()
-        year = int(m.group(3))
-        time_str = m.group(4)
-
-        MONTHS = {
-            "januar": 1, "februar": 2, "märz": 3, "april": 4, "mai": 5, "juni": 6,
-            "juli": 7, "august": 8, "september": 9, "oktober": 10, "november": 11, "dezember": 12
+    while True:
+        params = {
+            "offset": offset,
+            "limit": limit,
+            "filter": 1,
+            "byEventId": "false",
+            "members": "true",
+            "paidPlans": "true",
+            "locale": "de-de",
+            "recurringFilter": 1,
+            "filterType": 2,
+            "sortOrder": 0,
+            "fetchBadges": "true",
+            "draft": "false",
+            "compId": "TPASection_lxt9b797",
         }
 
-        if month_name not in MONTHS:
-            print("    ✗ Monatsname unbekannt")
-            continue
-
-        month = MONTHS[month_name]
+        print(f"  → Lade Events mit offset={offset}")
 
         try:
-            hour, minute = map(int, time_str.split(":"))
-        except:
-            print("    ✗ Uhrzeit konnte nicht extrahiert werden")
+            resp = requests.get(API_URL, params=params, timeout=20)
+            resp.raise_for_status()
+        except Exception as e:
+            print("Fehler beim API-Request:", e)
+            break
+
+        data = resp.json()
+        events = data.get("events", [])
+
+        print(f"    Gefundene Events: {len(events)}")
+
+        if not events:
+            break
+
+        all_events.extend(events)
+
+        # Wenn weniger als 16 Events → letzte Seite
+        if len(events) < limit:
+            break
+
+        offset += limit
+
+    print(f"Gesamt Events geladen: {len(all_events)}")
+    return all_events
+
+
+# ---------------------------------------------------------
+# Modern-Events extrahieren
+# ---------------------------------------------------------
+def fetch_dd_munich_events():
+    print("Hole Events von Deck & Dice / DD Munich...")
+
+    raw_events = fetch_all_events()
+    final = []
+
+    print("\n--- DEBUG: Modern-Filter ---")
+
+    for ev in raw_events:
+        title = ev.get("title", "").strip()
+
+        print(f"  → Prüfe: {title}")
+
+        if not is_modern_or_rcq(title):
+            print("    ✗ kein Modern/RCQ")
             continue
 
-        start = datetime(year, month, day, hour, minute, tzinfo=TZ)
-        end = start + timedelta(hours=3)
+        sched = ev.get("scheduling", {}).get("config", {})
+        start_str = sched.get("startDate")
+        end_str = sched.get("endDate")
+
+        if not start_str or not end_str:
+            print("    ✗ keine Start/Endzeit")
+            continue
+
+        start = datetime.fromisoformat(start_str.replace("Z", "+00:00")).astimezone(TZ)
+        end = datetime.fromisoformat(end_str.replace("Z", "+00:00")).astimezone(TZ)
 
         print("    ✓ Modern-Event übernommen")
 
-        events.append({
+        final.append({
             "title": title,
             "start": start,
             "end": end,
             "location": "Deck & Dice Munich",
             "url": "https://www.dd-munich.de",
-            "description": "",
+            "description": ev.get("description", ""),
         })
-
-    print(f"Widget Modern/RCQ Events: {len(events)}")
-    return events
-
-
-# ---------------------------------------------------------
-# Hauptfunktion
-# ---------------------------------------------------------
-def fetch_dd_munich_events():
-    print("Hole Events von Deck & Dice / DD Munich...")
-
-    url = "https://www.dd-munich.de/event-list"
-    headers = {"User-Agent": "Mozilla/5.0"}
-
-    try:
-        resp = requests.get(url, headers=headers, timeout=20)
-        resp.raise_for_status()
-    except Exception as e:
-        print("Fehler bei DD Munich:", e)
-        return []
-
-    soup = BeautifulSoup(resp.text, "html.parser")
-
-    widget_events = fetch_widget_modern_events(soup)
-
-    # Doppelte Events vermeiden
-    seen = set()
-    final = []
-
-    for ev in widget_events:
-        key = (ev["title"], ev["start"])
-        if key not in seen:
-            seen.add(key)
-            final.append(ev)
 
     print(f"\n--- DEBUG: FINAL ---")
     print(f"Gesamt Modern/RCQ Events: {len(final)}")
