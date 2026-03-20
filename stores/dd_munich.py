@@ -4,7 +4,7 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Berlin")
 
-API_URL = "https://www.dd-munich.de/_api/wix-one-events-server/web/paginated-events/viewer"
+API_URL = "https://www.dd-munich.de/_api/wix-events/v1/events?limit=500"
 
 # ---------------------------------------------------------
 # Modern/RCQ Filter (Premodern ausgeschlossen!)
@@ -12,7 +12,6 @@ API_URL = "https://www.dd-munich.de/_api/wix-one-events-server/web/paginated-eve
 def is_modern_or_rcq(title: str) -> bool:
     title = title.lower()
 
-    # Premodern explizit ausschließen
     if "premodern" in title:
         return False
 
@@ -63,71 +62,24 @@ def is_modern_or_rcq(title: str) -> bool:
 
 
 # ---------------------------------------------------------
-# API Pagination
+# Events laden (öffentliche API)
 # ---------------------------------------------------------
 def fetch_all_events():
-    print("\n--- DEBUG: API Pagination ---")
+    print("\n--- DEBUG: Öffentliche Wix-API ---")
+    print(f"  → Lade Events von {API_URL}")
 
-    offset = 0
-    limit = 16
-    all_events = []
+    try:
+        resp = requests.get(API_URL, timeout=20)
+        resp.raise_for_status()
+    except Exception as e:
+        print("Fehler beim API-Request:", e)
+        return []
 
-    # Browser-Header, um 403 zu vermeiden
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Referer": "https://www.dd-munich.de/event-list",
-        "Origin": "https://www.dd-munich.de",
-        "Sec-Fetch-Site": "same-origin",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Dest": "empty",
-    }
+    data = resp.json()
+    events = data.get("events", [])
 
-    while True:
-        params = {
-            "offset": offset,
-            "limit": limit,
-            "filter": 1,
-            "byEventId": "false",
-            "members": "true",
-            "paidPlans": "true",
-            "locale": "de-de",
-            "recurringFilter": 1,
-            "filterType": 2,
-            "sortOrder": 0,
-            "fetchBadges": "true",
-            "draft": "false",
-            "compId": "TPASection_lxt9b797",
-        }
-
-        print(f"  → Lade Events mit offset={offset}")
-
-        try:
-            resp = requests.get(API_URL, params=params, headers=headers, timeout=20)
-            resp.raise_for_status()
-        except Exception as e:
-            print("Fehler beim API-Request:", e)
-            break
-
-        data = resp.json()
-        events = data.get("events", [])
-
-        print(f"    Gefundene Events: {len(events)}")
-
-        if not events:
-            break
-
-        all_events.extend(events)
-
-        # Wenn weniger als 16 Events → letzte Seite
-        if len(events) < limit:
-            break
-
-        offset += limit
-
-    print(f"Gesamt Events geladen: {len(all_events)}")
-    return all_events
+    print(f"Gesamt Events geladen: {len(events)}")
+    return events
 
 
 # ---------------------------------------------------------
