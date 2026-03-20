@@ -1,290 +1,78 @@
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
-from ics import Calendar, Event
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from pathlib import Path
 
-print("Script gestartet")
-
-
-# ---------------------------------------------------------
-# DAUER SETZEN
-# ---------------------------------------------------------
-def set_default_duration(event):
-    name = event.name.lower()
-
-    if "rcq" in name or "regional championship" in name or "qualifier" in name:
-        event.duration = timedelta(hours=6)
-        return
-
-    if ("friday night" in name or "fnm" in name) and "modern" in name:
-        event.duration = timedelta(hours=4)
-        return
-
-    if "after" in name and "modern" in name:
-        event.duration = timedelta(hours=3)
-        return
-
-    if "store championship" in name or "championship" in name:
-        event.duration = timedelta(hours=5)
-        return
+from stores.bb_spiele import fetch_bb_spiele_events
+from stores.funtainment import fetch_funtainment_events
+from stores.dd_munich import fetch_dd_munich_events
 
 
-# ---------------------------------------------------------
-# FILTER
-# ---------------------------------------------------------
-def is_relevant_event(event):
-    name = event.name.lower()
-
-    if any(x in name for x in [
-        "rcq",
-        "regional championship",
-        "qualifier",
-        "wpn qualifier",
-        "store qualifier",
-        "championship qualifier"
-    ]):
-        return True
-
-    if "store championship" in name or "championship" in name:
-        return True
-
-    if ("friday night" in name or "fnm" in name) and "modern" in name:
-        return True
-
-    if "after work modern" in name or "after-work modern" in name or "afterwork modern" in name:
-        return True
-
-    return False
+TZ = ZoneInfo("Europe/Berlin")
 
 
-# ---------------------------------------------------------
-# BB-SPIELE
-# ---------------------------------------------------------
-def fetch_bbspiele_events():
-    print("Hole Events von BB-Spiele...")
-
-    url = "https://www.bb-spiele.de/events?categories=0196a9a7d19270a89170491be8392535&p=1"
-    headers = {"User-Agent": "Mozilla/5.0"}
-
-    try:
-        resp = requests.get(url, headers=headers)
-    except Exception as e:
-        print("Fehler bei BB-Spiele:", e)
-        return []
-
-    soup = BeautifulSoup(resp.text, "html.parser")
-    events = []
-
-    cards = soup.select(".events-card")
-
-    for card in cards:
-        title_el = card.select_one(".netzp-events-title")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-
-        date_el = card.select_one(".icon-calendar + span")
-        if not date_el:
-            continue
-
-        raw = date_el.get_text(strip=True)
-        parts = raw.split(",")
-        if len(parts) < 3:
-            continue
-
-        date_str = parts[1].strip()
-        time_str = parts[2].strip().split("-")[0].strip()
-
-        try:
-            dt = datetime.strptime(f"{date_str} {time_str}", "%d.%m.%y %H:%M")
-        except:
-            continue
-
-        loc_el = card.select_one(".icon-marker + b")
-        location = loc_el.get_text(strip=True) if loc_el else "BB-Spiele"
-
-        desc_el = card.select_one(".card-text.lead")
-        description = desc_el.get_text(strip=True) if desc_el else "Event von BB-Spiele"
-
-        e = Event()
-        e.name = title
-        e.begin = dt
-        e.location = location
-        e.description = description
-
-        set_default_duration(e)
-        events.append(e)
-
-    print(f"BB-Spiele Events gefunden: {len(events)}")
-    return events
+def format_dt(dt: datetime) -> str:
+    # ICS‑Format: YYYYMMDDTHHMMSS
+    return dt.astimezone(TZ).strftime("%Y%m%dT%H%M%S")
 
 
-# ---------------------------------------------------------
-# FUNTANIMENT
-# ---------------------------------------------------------
-def fetch_funtainment_events():
-    print("Hole Events von Funtainment...")
+def generate_ics(events, filename="munich_boardgame_events.ics"):
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Munich Boardgame Calendar//DE",
+        "CALSCALE:GREGORIAN",
+    ]
 
-    url = "https://www.funtainment.de/b2c-shop/tickets?categories=0197f53c9a997cbe8574b9211c0c8eaf&p=1"
-    headers = {"User-Agent": "Mozilla/5.0"}
+    for ev in events:
+        uid = f"{ev['title']}-{format_dt(ev['start'])}@munich-boardgames"
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{uid}",
+                f"DTSTAMP:{format_dt(datetime.now(TZ))}",
+                f"DTSTART:{format_dt(ev['start'])}",
+                f"DTEND:{format_dt(ev['end'])}",
+                f"SUMMARY:{ev['title']}",
+                f"LOCATION:{ev.get('location', '')}",
+                f"URL:{ev.get('url', '')}",
+                f"DESCRIPTION:{ev.get('description', '').replace('\n', ' ')}",
+                "END:VEVENT",
+            ]
+        )
 
-    try:
-        resp = requests.get(url, headers=headers)
-    except Exception as e:
-        print("Fehler bei Funtainment:", e)
-        return []
+    lines.append("END:VCALENDAR")
 
-    soup = BeautifulSoup(resp.text, "html.parser")
-    events = []
-
-    cards = soup.select(".events-card")
-
-    for card in cards:
-        title_el = card.select_one(".netzp-events-title")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-
-        date_el = card.select_one(".icon-calendar + span")
-        if not date_el:
-            continue
-
-        raw = date_el.get_text(strip=True)
-        parts = raw.split(",")
-        if len(parts) < 3:
-            continue
-
-        date_str = parts[1].strip()
-        time_str = parts[2].strip().split("-")[0].strip()
-
-        try:
-            dt = datetime.strptime(f"{date_str} {time_str}", "%d.%m.%y %H:%M")
-        except:
-            continue
-
-        loc_el = card.select_one(".icon-marker + b")
-        location = loc_el.get_text(strip=True) if loc_el else "Funtainment München"
-
-        desc_el = card.select_one(".card-text.lead")
-        description = desc_el.get_text(strip=True) if desc_el else "Event von Funtainment"
-
-        e = Event()
-        e.name = title
-        e.begin = dt
-        e.location = location
-        e.description = description
-
-        set_default_duration(e)
-        events.append(e)
-
-    print(f"Funtainment Events gefunden: {len(events)}")
-    return events
+    Path(filename).write_text("\n".join(lines), encoding="utf-8")
+    print(f"Fertig! Datei erzeugt: {filename}")
 
 
-# ---------------------------------------------------------
-# DECK & DICE — KALENDER SCRAPEN
-# ---------------------------------------------------------
-def fetch_ddmunich_events():
-    print("Hole Events von Deck & Dice / DD Munich...")
-
-    url = "https://www.dd-munich.de/event-list"
-    headers = {"User-Agent": "Mozilla/5.0"}
-
-    try:
-        resp = requests.get(url, headers=headers)
-    except Exception as e:
-        print("Fehler bei DD Munich:", e)
-        return []
-
-    soup = BeautifulSoup(resp.text, "html.parser")
-    events = []
-
-    # Alle Kalenderzellen finden
-    cells = soup.select('div[data-hook^="calendar-cell-"]')
-
-    for cell in cells:
-        data_hook = cell.get("data-hook")
-        if not data_hook:
-            continue
-
-        # Datum aus dem data-hook extrahieren
-        iso = data_hook.replace("calendar-cell-", "")
-        try:
-            date = datetime.fromisoformat(iso.replace("Z", "+00:00"))
-        except:
-            continue
-
-        # Uhrzeit
-        time_el = cell.select_one(".B11jYK")
-        if not time_el:
-            continue
-        time_str = time_el.get_text(strip=True)
-
-        # Titel
-        title_el = cell.select_one(".OyuNR8")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        name_lower = title.lower()
-
-        # Nur Modern-Events
-        if "modern" not in name_lower:
-            continue
-
-        # Datum + Uhrzeit kombinieren
-        try:
-            hour, minute = time_str.split(":")
-            dt = date.replace(hour=int(hour), minute=int(minute))
-        except:
-            continue
-
-        e = Event()
-        e.name = title
-        e.begin = dt
-        e.location = "Deck & Dice / DD Munich"
-        e.description = "Event von Deck & Dice / DD Munich"
-
-        set_default_duration(e)
-        events.append(e)
-
-    print(f"DD Munich Events gefunden: {len(events)}")
-    return events
-
-
-# ---------------------------------------------------------
-# GENERATE ICS
-# ---------------------------------------------------------
-def generate_ics():
+def main():
+    print("Script gestartet")
     print("Erzeuge Kalender...")
 
-    cal = Calendar()
+    all_events = []
 
-    bb = fetch_bbspiele_events()
-    ft = fetch_funtainment_events()
-    dd = fetch_ddmunich_events()
+    print("Hole Events von BB-Spiele...")
+    try:
+        all_events.extend(fetch_bb_spiele_events())
+    except Exception as e:
+        print(f"Fehler bei BB-Spiele: {e}")
 
-    all_events = bb + ft + dd
+    print("Hole Events von Funtainment...")
+    try:
+        all_events.extend(fetch_funtainment_events())
+    except Exception as e:
+        print(f"Fehler bei Funtainment: {e}")
 
-    all_events = [e for e in all_events if is_relevant_event(e)]
+    print("Hole Events von Deck & Dice / DD Munich...")
+    try:
+        all_events.extend(fetch_dd_munich_events())
+    except Exception as e:
+        print(f"Fehler bei DD Munich: {e}")
 
-    unique = {}
-    for e in all_events:
-        key = (e.name.lower(), e.begin)
-        unique[key] = e
-    all_events = list(unique.values())
-
-    all_events.sort(key=lambda e: e.begin)
-
-    print("Gesamtanzahl Events:", len(all_events))
-
-    for e in all_events:
-        cal.events.add(e)
-
-    with open("magic.ics", "w", encoding="utf-8") as f:
-        f.writelines(cal)
-
-    print("Fertig! Datei erzeugt.")
+    print(f"Gesamtanzahl Events: {len(all_events)}")
+    generate_ics(all_events)
 
 
 if __name__ == "__main__":
-    generate_ics()
+    main()
