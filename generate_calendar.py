@@ -210,56 +210,47 @@ def fetch_ddmunich_events():
     soup = BeautifulSoup(resp.text, "html.parser")
     events = []
 
-    cells = soup.select("[data-hook^='calendar-cell-']")
+    cards = soup.select('li[data-hook="events-card"]')
 
-    for cell in cells:
-        data_hook = cell.get("data-hook")
-        if not data_hook:
+    for card in cards:
+        # Titel
+        title_el = card.select_one('a[data-hook="title"]')
+        if not title_el:
+            continue
+        title = title_el.get_text(strip=True)
+        name_lower = title.lower()
+
+        # Nur Modern-Events behalten
+        if "modern" not in name_lower:
             continue
 
+        # Datum + Uhrzeit
+        date_el = card.select_one('div[data-hook="date"]')
+        if not date_el:
+            continue
+
+        raw = date_el.get_text(strip=True)
+        # Beispiel: "20. März 2026, 18:30 – 23:00"
         try:
-            iso = data_hook.replace("calendar-cell-", "")
-            date = datetime.fromisoformat(iso.replace("Z", ""))
+            date_part, time_part = raw.split(",")
+            start_time = time_part.split("–")[0].strip()
+            dt = datetime.strptime(f"{date_part.strip()} {start_time}", "%d. %b %Y %H:%M")
         except:
-            continue
-
-        items = cell.select(".x336W1")
-
-        for item in items:
-            title_el = item.select_one(".OyuNR8")
-            if not title_el:
+            # Alternative Format: "20. März 2026, 18:30 – 23:00"
+            try:
+                dt = datetime.strptime(raw.split("–")[0].strip(), "%d. %B %Y, %H:%M")
+            except:
                 continue
 
-            title = title_el.get_text(strip=True)
-            name_lower = title.lower()
+        # Event erstellen
+        e = Event()
+        e.name = title
+        e.begin = dt
+        e.location = "Deck & Dice / DD Munich"
+        e.description = "Event von Deck & Dice / DD Munich"
 
-            # Wir wollen hier NUR:
-            # - Friday Night Modern 18.30
-            # - After Work Modern - 19:00 Uhr
-            if "friday night modern" in name_lower:
-                hour, minute = 18, 30
-            elif "after work modern" in name_lower or "after-work modern" in name_lower or "afterwork modern" in name_lower:
-                hour, minute = 19, 0
-            else:
-                # alle anderen DD-Events ignorieren
-                continue
-
-            dt = datetime(
-                year=date.year,
-                month=date.month,
-                day=date.day,
-                hour=hour,
-                minute=minute,
-            )
-
-            e = Event()
-            e.name = title
-            e.begin = dt
-            e.location = "Deck & Dice / DD Munich"
-            e.description = "Event von Deck & Dice / DD Munich"
-
-            set_default_duration(e)
-            events.append(e)
+        set_default_duration(e)
+        events.append(e)
 
     print(f"DD Munich Events gefunden: {len(events)}")
     return events
