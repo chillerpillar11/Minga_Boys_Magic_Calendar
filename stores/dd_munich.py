@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Berlin")
@@ -72,6 +72,18 @@ def fetch_all_events():
     limit = 16
     all_events = []
 
+    # Browser-Header, um 403 zu vermeiden
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": "https://www.dd-munich.de/event-list",
+        "Origin": "https://www.dd-munich.de",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+    }
+
     while True:
         params = {
             "offset": offset,
@@ -92,7 +104,7 @@ def fetch_all_events():
         print(f"  → Lade Events mit offset={offset}")
 
         try:
-            resp = requests.get(API_URL, params=params, timeout=20)
+            resp = requests.get(API_URL, params=params, headers=headers, timeout=20)
             resp.raise_for_status()
         except Exception as e:
             print("Fehler beim API-Request:", e)
