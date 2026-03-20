@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import uuid
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
@@ -13,17 +13,14 @@ from stores.dd_munich import fetch_dd_munich_events
 TZ = ZoneInfo("Europe/Berlin")
 HISTORY_FILE = Path("events_history.json")
 
-
 # ---------------------------------------------------------
 # ICS-Helfer
 # ---------------------------------------------------------
 def format_dt(dt: datetime) -> str:
-    """ICS-konforme Zeitformatierung."""
     return dt.astimezone(TZ).strftime("%Y%m%dT%H%M%S")
 
 
 def generate_ics(events, filename="magic.ics"):
-    """Erstellt eine ICS-Datei aus Event-Dictionaries."""
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -50,7 +47,6 @@ def generate_ics(events, filename="magic.ics"):
         lines.append("END:VEVENT")
 
     lines.append("END:VCALENDAR")
-
     Path(filename).write_text("\n".join(lines), encoding="utf-8")
     print(f"ICS erzeugt: {filename}")
 
@@ -79,6 +75,42 @@ def save_history(events):
             "description": ev.get("description", "")
         })
     HISTORY_FILE.write_text(json.dumps(serializable, indent=2), encoding="utf-8")
+
+
+# ---------------------------------------------------------
+# Proxy-Event-Generator (12 Wochen)
+# ---------------------------------------------------------
+def generate_proxy_events(event):
+    title = event["title"].lower()
+
+    weekly_keywords = [
+        "after work modern",
+        "friday night modern",
+        "friday night magic",
+        "fnm",
+    ]
+
+    if not any(k in title for k in weekly_keywords):
+        return []
+
+    proxy_events = []
+    start = event["start"]
+    end = event["end"]
+
+    for i in range(1, 13):  # 12 Wochen
+        new_start = start + timedelta(weeks=i)
+        new_end = end + timedelta(weeks=i)
+
+        proxy_events.append({
+            "title": event["title"],
+            "start": new_start,
+            "end": new_end,
+            "location": event.get("location", ""),
+            "url": event.get("url", ""),
+            "description": event.get("description", "")
+        })
+
+    return proxy_events
 
 
 # ---------------------------------------------------------
@@ -120,6 +152,15 @@ def main():
     print(f"Neue Events geladen: {len(all_events)}")
 
     # ---------------------------------------------------------
+    # Proxy-Events erzeugen
+    # ---------------------------------------------------------
+    proxy_events = []
+    for ev in all_events:
+        proxy_events.extend(generate_proxy_events(ev))
+
+    print(f"Erzeugte Proxy-Events: {len(proxy_events)}")
+
+    # ---------------------------------------------------------
     # Alte Events laden
     # ---------------------------------------------------------
     history = load_history()
@@ -136,33 +177,31 @@ def main():
         })
 
     # ---------------------------------------------------------
-    # Neue + alte Events zusammenführen
+    # Neue + Proxy + alte Events zusammenführen
     # ---------------------------------------------------------
-    combined = restored + all_events
+    combined = restored + all_events + proxy_events
 
     # ---------------------------------------------------------
-    # Duplikate entfernen
+    # Duplikate entfernen (echte Events überschreiben Proxy)
     # ---------------------------------------------------------
-    unique = []
-    seen = set()
-
+    unique = {}
     for ev in combined:
-        key = (ev["title"].lower().strip(), ev["start"])
-        if key not in seen:
-            seen.add(key)
-            unique.append(ev)
+        key = (ev["title"].lower().strip(), ev["start"].isoformat())
+        unique[key] = ev  # echte Events überschreiben Proxy
 
-    print(f"Gesamtanzahl Events (inkl. Vergangenheit): {len(unique)}")
+    final_events = list(unique.values())
+
+    print(f"Gesamtanzahl Events (inkl. Vergangenheit & Proxy): {len(final_events)}")
 
     # ---------------------------------------------------------
     # History aktualisieren
     # ---------------------------------------------------------
-    save_history(unique)
+    save_history(final_events)
 
     # ---------------------------------------------------------
     # ICS erzeugen
     # ---------------------------------------------------------
-    generate_ics(unique)
+    generate_ics(final_events)
 
 
 if __name__ == "__main__":
