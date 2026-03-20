@@ -1,10 +1,14 @@
 from datetime import datetime
-from ics import Calendar, Event
+from zoneinfo import ZoneInfo
 
 from bb_spiele import fetch_bb_spiele_events
 from funtainment import fetch_funtainment_events
 
+TZ = ZoneInfo("Europe/Berlin")
+
+
 def is_modern_or_rcq(title: str) -> bool:
+    """Lässt nur Modern-Events oder RCQs durch."""
     title = title.lower()
 
     include = [
@@ -16,6 +20,7 @@ def is_modern_or_rcq(title: str) -> bool:
 
     exclude = [
         "commander",
+        "edh",
         "draft",
         "sealed",
         "prerelease",
@@ -45,6 +50,36 @@ def is_modern_or_rcq(title: str) -> bool:
 
     return any(x in title for x in include)
 
+
+def write_ics(events, filename="magic.ics"):
+    """Schreibt eine ICS-Datei ohne externe Module."""
+    def fmt(dt):
+        return dt.strftime("%Y%m%dT%H%M%S")
+
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Magic Calendar//DE",
+        "CALSCALE:GREGORIAN",
+    ]
+
+    for ev in events:
+        lines.extend([
+            "BEGIN:VEVENT",
+            f"SUMMARY:{ev['title']}",
+            f"DTSTART;TZID=Europe/Berlin:{fmt(ev['start'])}",
+            f"DTEND;TZID=Europe/Berlin:{fmt(ev['end'])}",
+            f"LOCATION:{ev['location']}",
+            f"URL:{ev['url']}",
+            "END:VEVENT",
+        ])
+
+    lines.append("END:VCALENDAR")
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+
 def main():
     print("Script gestartet")
     print("Erzeuge Kalender...")
@@ -52,35 +87,26 @@ def main():
     all_events = []
 
     # BB-Spiele
-    all_events.extend([
-        ev for ev in fetch_bb_spiele_events()
-        if is_modern_or_rcq(ev["title"])
-    ])
+    bb_events = fetch_bb_spiele_events()
+    bb_filtered = [ev for ev in bb_events if is_modern_or_rcq(ev["title"])]
+    print(f"BB-Spiele Modern/RCQ: {len(bb_filtered)}")
+    all_events.extend(bb_filtered)
 
     # Funtainment
-    all_events.extend([
-        ev for ev in fetch_funtainment_events()
-        if is_modern_or_rcq(ev["title"])
-    ])
+    ft_events = fetch_funtainment_events()
+    ft_filtered = [ev for ev in ft_events if is_modern_or_rcq(ev["title"])]
+    print(f"Funtainment Modern/RCQ: {len(ft_filtered)}")
+    all_events.extend(ft_filtered)
 
     print(f"Gesamtanzahl Events: {len(all_events)}")
 
-    cal = Calendar()
+    # Sortieren nach Datum
+    all_events.sort(key=lambda e: e["start"])
 
-    for ev in all_events:
-        e = Event()
-        e.name = ev["title"]
-        e.begin = ev["start"]
-        e.end = ev["end"]
-        e.location = ev["location"]
-        e.url = ev["url"]
-        e.description = ev["description"]
-        cal.events.add(e)
-
-    with open("magic.ics", "w", encoding="utf-8") as f:
-        f.writelines(cal)
-
+    # ICS erzeugen
+    write_ics(all_events)
     print("ICS erzeugt: magic.ics")
+
 
 if __name__ == "__main__":
     main()
