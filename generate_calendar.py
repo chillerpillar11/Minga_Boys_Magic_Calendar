@@ -7,6 +7,69 @@ print("Script gestartet")
 
 
 # ---------------------------------------------------------
+# DAUER SETZEN
+# ---------------------------------------------------------
+def set_default_duration(event):
+    name = event.name.lower()
+
+    # RCQ
+    if "rcq" in name or "regional championship" in name or "qualifier" in name:
+        event.duration = timedelta(hours=6)
+        return
+
+    # Friday Night Magic Modern
+    if ("friday night" in name or "fnm" in name) and "modern" in name:
+        event.duration = timedelta(hours=4)
+        return
+
+    # After Work Modern
+    if "after" in name and "modern" in name:
+        event.duration = timedelta(hours=3)
+        return
+
+    # Store Championship
+    if "store championship" in name or "championship" in name:
+        event.duration = timedelta(hours=5)
+        return
+
+
+# ---------------------------------------------------------
+# FILTER: NUR RELEVANTE EVENTS
+# ---------------------------------------------------------
+def is_relevant_event(event):
+    name = event.name.lower()
+    location = (event.location or "").lower()
+
+    # RCQ (alle Shops)
+    if any(x in name for x in [
+        "rcq",
+        "regional championship",
+        "qualifier",
+        "wpn qualifier",
+        "store qualifier",
+        "championship qualifier"
+    ]):
+        return True
+
+    # Store Championship (alle Shops)
+    if "store championship" in name or "championship" in name:
+        return True
+
+    # Friday Night Modern (alle Shops)
+    if (
+        any(x in name for x in ["friday night", "fnm", "friday night magic"])
+        and "modern" in name
+    ):
+        return True
+
+    # After Work Modern (Deck & Dice – aber wir sind großzügig)
+    if any(x in name for x in ["after work modern", "afterwork modern", "after-work modern"]):
+        return True
+
+    return False
+
+
+# ---------------------------------------------------------
 # BB-SPIELE
 # ---------------------------------------------------------
 def fetch_bbspiele_events():
@@ -164,22 +227,35 @@ def fetch_ddmunich_events():
         items = cell.select(".x336W1")
 
         for item in items:
-            time_el = item.select_one(".B11jYK")
             title_el = item.select_one(".OyuNR8")
-
-            if not time_el or not title_el:
+            if not title_el:
                 continue
 
-            time_str = time_el.get_text(strip=True)
             title = title_el.get_text(strip=True)
+            name_lower = title.lower()
 
-            try:
-                dt = datetime.strptime(
-                    f"{date.strftime('%Y-%m-%d')} {time_str}",
-                    "%Y-%m-%d %H:%M"
-                )
-            except:
+            # Wir interessieren uns nur für:
+            # - Friday Night Modern 18.30
+            # - After Work Modern - 19:00 Uhr
+            if "modern" not in name_lower:
                 continue
+
+            # Uhrzeit aus dem Titel ableiten
+            if "friday night modern" in name_lower:
+                hour, minute = 18, 30
+            elif "after work modern" in name_lower or "after-work modern" in name_lower or "afterwork modern" in name_lower:
+                hour, minute = 19, 0
+            else:
+                # andere Modern-Events ignorieren
+                continue
+
+            dt = datetime(
+                year=date.year,
+                month=date.month,
+                day=date.day,
+                hour=hour,
+                minute=minute,
+            )
 
             e = Event()
             e.name = title
@@ -192,73 +268,6 @@ def fetch_ddmunich_events():
 
     print(f"DD Munich Events gefunden: {len(events)}")
     return events
-
-
-# ---------------------------------------------------------
-# FILTER: NUR RELEVANTE EVENTS
-# ---------------------------------------------------------
-def is_relevant_event(event):
-    name = event.name.lower()
-    location = (event.location or "").lower()
-
-    # RCQ (alle Shops)
-    if any(x in name for x in [
-        "rcq",
-        "regional championship",
-        "qualifier",
-        "wpn qualifier",
-        "store qualifier",
-        "championship qualifier"
-    ]):
-        return True
-
-    # Store Championship (alle Shops)
-    if "store championship" in name or "championship" in name:
-        return True
-
-    # Friday Night Modern (alle Shops)
-    if (
-        any(x in name for x in ["friday night", "fnm", "friday night magic"])
-        and "modern" in name
-    ):
-        return True
-
-    # After Work Modern (nur Deck & Dice / DD Munich)
-    if (
-        any(x in name for x in ["after", "afterwork", "after-work"])
-        and "modern" in name
-        and any(x in location for x in ["deck", "dice", "dd munich"])
-    ):
-        return True
-
-    return False
-
-
-# ---------------------------------------------------------
-# DAUER SETZEN
-# ---------------------------------------------------------
-def set_default_duration(event):
-    name = event.name.lower()
-
-    # RCQ
-    if "rcq" in name or "regional championship" in name or "qualifier" in name:
-        event.duration = timedelta(hours=6)
-        return
-
-    # Friday Night Magic Modern
-    if ("friday night" in name or "fnm" in name) and "modern" in name:
-        event.duration = timedelta(hours=4)
-        return
-
-    # After Work Modern
-    if "after" in name and "modern" in name:
-        event.duration = timedelta(hours=3)
-        return
-
-    # Store Championship
-    if "store championship" in name or "championship" in name:
-        event.duration = timedelta(hours=5)
-        return
 
 
 # ---------------------------------------------------------
