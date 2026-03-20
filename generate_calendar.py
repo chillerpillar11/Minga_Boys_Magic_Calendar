@@ -1,131 +1,213 @@
 import requests
+from bs4 import BeautifulSoup
 from datetime import datetime
 from ics import Calendar, Event
 
 print("Script gestartet")
 
-# Stabile Wizards-JSON-API (wird von der Webseite selbst genutzt)
-WIZARDS_API = (
-    "https://locator.wizards.com/api/event/search"
-    "?query=München"
-    "&distance=100"
-    "&searchType=magic-events"
-)
 
-MTGO_URL = "https://mtgoupdate.com/"
+# ---------------------------------------------------------
+# BB-SPIELE
+# ---------------------------------------------------------
+def fetch_bbspiele_events():
+    print("Hole Events von BB-Spiele...")
 
-
-def fetch_wizards_events():
-    print("Hole Wizards Events (RCQ JSON API)...")
-
-    url = (
-        "https://locator.wizards.com/api/event/search"
-        "?tag=regional_championship_qualifier"
-        "&searchType=magic-events"
-        "&query=81547%20M%C3%BCnchen-Untergiesing-Harlaching,%20Deutschland"
-        "&distance=100"
-        "&page=1"
-        "&sort=date"
-        "&sortDirection=Asc"
-    )
-
-    headers = {
-        "User-Agent": "Mozilla/5.0",
-        "Accept": "application/json",
-    }
+    url = "https://www.bb-spiele.de/events?categories=0196a9a7d19270a89170491be8392535&p=1"
+    headers = {"User-Agent": "Mozilla/5.0"}
 
     try:
         resp = requests.get(url, headers=headers)
-        data = resp.json()
     except Exception as e:
-        print("Fehler beim Laden der Wizards API:", e)
+        print("Fehler bei BB-Spiele:", e)
         return []
 
+    soup = BeautifulSoup(resp.text, "html.parser")
     events = []
 
-    results = data.get("results", [])
+    items = soup.select(".event-list-item")
+    for item in items:
+        title_el = item.select_one(".event-title")
+        date_el = item.select_one(".event-date")
+        loc_el = item.select_one(".event-location")
 
-    for item in results:
-        title = item.get("title")
-        store = item.get("storeName", "")
-        address = item.get("address", "")
-        start = item.get("startDate")
-
-        if not (title and start):
+        if not title_el or not date_el:
             continue
 
+        title = title_el.get_text(strip=True)
+        date_str = date_el.get_text(strip=True).replace("–", "-")
+        location = loc_el.get_text(strip=True) if loc_el else "BB Spiele München"
+
         try:
-            dt = datetime.fromisoformat(start.replace("Z", ""))
+            dt = datetime.strptime(date_str, "%d.%m.%Y - %H:%M")
         except:
             continue
 
         e = Event()
-        e.name = f"{title} – {store}" if store else title
+        e.name = title
         e.begin = dt
-        e.location = address
-        e.description = "Regional Championship Qualifier"
-
+        e.location = location
+        e.description = "Event von BB-Spiele"
         events.append(e)
 
-    print(f"Wizards RCQs gefunden: {len(events)}")
+    print(f"BB-Spiele Events gefunden: {len(events)}")
     return events
 
 
-def fetch_mtgo_events():
-    print("Hole MTGO Events...")
+# ---------------------------------------------------------
+# DD MUNICH
+# ---------------------------------------------------------
+def fetch_ddmunich_events():
+    print("Hole Events von DD Munich...")
 
-    events = []
+    url = "https://www.dd-munich.de/event-list"
+    headers = {"User-Agent": "Mozilla/5.0"}
+
     try:
-        resp = requests.get(MTGO_URL)
+        resp = requests.get(url, headers=headers)
     except Exception as e:
-        print("Fehler beim Laden von MTGO:", e)
-        return events
+        print("Fehler bei DD Munich:", e)
+        return []
 
-    from bs4 import BeautifulSoup
     soup = BeautifulSoup(resp.text, "html.parser")
+    events = []
 
-    rows = soup.select("table tbody tr")
-    for row in rows:
-        cols = [c.get_text(strip=True) for c in row.find_all("td")]
-        if len(cols) < 4:
+    items = soup.select(".event")
+    for item in items:
+        title_el = item.select_one("h3")
+        date_el = item.select_one(".date")
+        loc_el = item.select_one(".location")
+
+        if not title_el or not date_el:
             continue
 
-        name, format_, date_str, time_str = cols[:4]
+        title = title_el.get_text(strip=True)
+        date_str = date_el.get_text(strip=True)
+        location = loc_el.get_text(strip=True) if loc_el else "DD Munich"
 
-        if "Modern" not in format_:
-            continue
-
-        dt_str = f"{date_str} {time_str}"
         try:
-            start_dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M")
-        except ValueError:
+            dt = datetime.strptime(date_str, "%d.%m.%Y %H:%M")
+        except:
             continue
 
         e = Event()
-        e.name = f"MTGO {name} ({format_})"
-        e.begin = start_dt
-        e.description = "MTGO Modern Event"
+        e.name = title
+        e.begin = dt
+        e.location = location
+        e.description = "Event von DD Munich"
         events.append(e)
 
-    print(f"MTGO Events gefunden: {len(events)}")
+    print(f"DD Munich Events gefunden: {len(events)}")
     return events
 
 
+# ---------------------------------------------------------
+# FUNTANIMENT
+# ---------------------------------------------------------
+def fetch_funtainment_events():
+    print("Hole Events von Funtainment...")
+
+    url = "https://www.funtainment.de/b2c-shop/tickets?categories=0197f53c9a997cbe8574b9211c0c8eaf&p=1"
+    headers = {"User-Agent": "Mozilla/5.0"}
+
+    try:
+        resp = requests.get(url, headers=headers)
+    except Exception as e:
+        print("Fehler bei Funtainment:", e)
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    events = []
+
+    items = soup.select(".product--box")
+    for item in items:
+        title_el = item.select_one(".product--title")
+        date_el = item.select_one(".product--price-info")
+
+        if not title_el or not date_el:
+            continue
+
+        title = title_el.get_text(strip=True)
+        date_str = date_el.get_text(strip=True)
+
+        try:
+            dt = datetime.strptime(date_str, "%d.%m.%Y %H:%M")
+        except:
+            continue
+
+        e = Event()
+        e.name = title
+        e.begin = dt
+        e.location = "Funtainment München"
+        e.description = "Event von Funtainment"
+        events.append(e)
+
+    print(f"Funtainment Events gefunden: {len(events)}")
+    return events
+
+
+# ---------------------------------------------------------
+# MAGIC PAPA
+# ---------------------------------------------------------
+def fetch_magicpapa_events():
+    print("Hole Events von MagicPapa...")
+
+    url = "https://www.magicpapa-shop.de/c/events"
+    headers = {"User-Agent": "Mozilla/5.0"}
+
+    try:
+        resp = requests.get(url, headers=headers)
+    except Exception as e:
+        print("Fehler bei MagicPapa:", e)
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    events = []
+
+    items = soup.select(".product--box")
+    for item in items:
+        title_el = item.select_one(".product--title")
+        date_el = item.select_one(".product--delivery")
+
+        if not title_el or not date_el:
+            continue
+
+        title = title_el.get_text(strip=True)
+        date_str = date_el.get_text(strip=True)
+
+        try:
+            dt = datetime.strptime(date_str, "%d.%m.%Y %H:%M")
+        except:
+            continue
+
+        e = Event()
+        e.name = title
+        e.begin = dt
+        e.location = "MagicPapa München"
+        e.description = "Event von MagicPapa"
+        events.append(e)
+
+    print(f"MagicPapa Events gefunden: {len(events)}")
+    return events
+
+
+# ---------------------------------------------------------
+# GENERATE ICS
+# ---------------------------------------------------------
 def generate_ics():
     print("Erzeuge Kalender...")
 
     cal = Calendar()
 
-    wizards = fetch_wizards_events()
-    mtgo = fetch_mtgo_events()
+    bb = fetch_bbspiele_events()
+    dd = fetch_ddmunich_events()
+    ft = fetch_funtainment_events()
+    mp = fetch_magicpapa_events()
 
-    print("Wizards Events:", len(wizards))
-    print("MTGO Events:", len(mtgo))
+    all_events = bb + dd + ft + mp
 
-    for e in wizards:
-        cal.events.add(e)
+    print("Gesamtanzahl Events:", len(all_events))
 
-    for e in mtgo:
+    for e in all_events:
         cal.events.add(e)
 
     print("Schreibe magic.ics...")
