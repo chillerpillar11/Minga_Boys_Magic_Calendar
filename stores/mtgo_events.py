@@ -6,6 +6,14 @@ import re
 
 TZ = ZoneInfo("Europe/Berlin")
 
+DEBUG = True
+
+
+def dbg(*args):
+    if DEBUG:
+        print("[MTGO DEBUG]", *args)
+
+
 # ---------------------------------------------------------
 # Modern-Filter (Premodern ausgeschlossen)
 # ---------------------------------------------------------
@@ -70,12 +78,12 @@ def extract_event(text: str):
 # ---------------------------------------------------------
 def infer_month_year(day_number: int):
     today = datetime.now(TZ)
+    dbg("infer_month_year: today =", today, "day_number =", day_number)
 
-    # Wenn der Tag >= heute.day - 3 → gleicher Monat
     if day_number >= today.day - 3:
+        dbg("→ gleicher Monat/Jahr:", today.month, today.year)
         return today.month, today.year
 
-    # Sonst → nächster Monat
     next_month = today.month + 1
     next_year = today.year
 
@@ -83,6 +91,7 @@ def infer_month_year(day_number: int):
         next_month = 1
         next_year += 1
 
+    dbg("→ nächster Monat/Jahr:", next_month, next_year)
     return next_month, next_year
 
 
@@ -92,48 +101,70 @@ def infer_month_year(day_number: int):
 def scrape_week(container):
     events = []
 
-    # Ersten Tag finden
+    dbg("Scrape Woche gestartet")
+
     first_legend = container.select_one("#day0 legend span")
+    dbg("first_legend:", first_legend)
+
     if not first_legend:
+        dbg("Kein first_legend gefunden")
         return []
 
-    m = re.match(r"[A-Za-z]+\s+(\d{1,2}[a-z]{2})", first_legend.get_text(strip=True))
+    first_text = first_legend.get_text(strip=True)
+    dbg("first_legend text:", first_text)
+
+    m = re.match(r"[A-Za-z]+\s+(\d{1,2}[a-z]{2})", first_text)
     if not m:
+        dbg("Konnte first_legend nicht parsen")
         return []
 
     first_day_number = parse_day_suffix(m.group(1))
+    dbg("first_day_number:", first_day_number)
+
     month, year = infer_month_year(first_day_number)
 
-    # Jetzt alle 7 Tage scrapen
     for day_index in range(7):
         day_div = container.select_one(f"#day{day_index}")
+        dbg(f"day{day_index} gefunden:", bool(day_div))
         if not day_div:
             continue
 
         legend = day_div.select_one("legend span")
+        dbg(f"legend day{day_index}:", legend)
         if not legend:
             continue
 
         legend_text = legend.get_text(strip=True)
+        dbg(f"legend_text day{day_index}:", legend_text)
+
         m = re.match(r"[A-Za-z]+\s+(\d{1,2}[a-z]{2})", legend_text)
         if not m:
+            dbg("Konnte legend nicht parsen:", legend_text)
             continue
 
         day_number = parse_day_suffix(m.group(1))
+        dbg(f"day_number day{day_index}:", day_number)
 
         for font in day_div.select("font"):
             text = font.get_text(strip=True)
+            dbg("Raw event text:", text)
+
             parsed = extract_event(text)
+            dbg("Parsed:", parsed)
+
             if not parsed:
+                dbg("Konnte Event nicht parsen:", text)
                 continue
 
             hour, minute, title = parsed
+            dbg("Event erkannt:", hour, minute, title)
 
-            # Modern-Filter
             if not is_modern_event(title):
+                dbg("Nicht Modern, übersprungen:", title)
                 continue
 
-            # Format-Tags
+            dbg("Modern-Event akzeptiert:", title)
+
             t = title.lower()
             if "showcase" in t:
                 tag = "[Showcase] "
@@ -145,9 +176,12 @@ def scrape_week(container):
                 tag = ""
 
             final_title = f"{tag}MTGO – {title.strip()}"
+            dbg("Finaler Titel:", final_title)
 
             start = datetime(year, month, day_number, hour, minute, tzinfo=TZ)
             end = start + timedelta(hours=3)
+
+            dbg("Start/Ende:", start, end)
 
             events.append({
                 "title": final_title,
@@ -158,6 +192,7 @@ def scrape_week(container):
                 "description": "",
             })
 
+    dbg("Anzahl Events in Woche:", len(events))
     return events
 
 
@@ -177,12 +212,19 @@ def fetch_mtgo_events():
         print("Fehler bei MTGO:", e)
         return []
 
+    dbg("Seite geladen, Länge:", len(resp.text))
+
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    container = soup.select_one("div.container")
-    if not container:
+    containers = soup.select("div.container")
+    dbg("Gefundene container:", len(containers))
+
+    if not containers:
         print("MTGO: Kein div.container gefunden")
         return []
+
+    container = containers[0]
+    dbg("Nutze container 0")
 
     week_events = scrape_week(container)
     print(f"MTGO Modern Events gefunden: {len(week_events)}")
