@@ -52,7 +52,7 @@ def is_modern_or_rcq(title: str) -> bool:
 def fetch_bb_spiele_events():
     print("Hole Events von BB-Spiele...")
 
-    url = "https://www.bb-spiele.de/events?categories=0196a9a7d19270a89170491be8392535&p=1"
+    url = "https://www.bb-spiele.de/events"
     headers = {"User-Agent": "Mozilla/5.0"}
 
     try:
