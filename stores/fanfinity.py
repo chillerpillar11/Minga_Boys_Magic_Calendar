@@ -53,21 +53,21 @@ def fetch_fanfinity_events():
             print("Fanfinity: Konnte Monat/Jahr nicht parsen:", month_year_text)
             continue
 
-        # Kombiniertes Datum
-        start = month_year.replace(day=day, hour=0, minute=0)
+        # Startdatum
+        start = month_year.replace(day=day)
 
-        # Fanfinity-Events laufen immer Fr–So → +2 Tage
-        end = start + timedelta(days=2)
-        end = end.replace(hour=23, minute=59)
+        # ICS-Enddatum ist EXKLUSIV → +3 Tage für Fr–So
+        end = start + timedelta(days=3)
 
         events.append({
             "title": title,
             "url": url,
-            "start": start,
-            "end": end,
+            "start": start,   # All-Day: nur Datum
+            "end": end,       # All-Day: exklusives Enddatum
             "store": "Fanfinity",
             "location": "Online",
-            "description": f"Event von Fanfinity: {title}\n{url}"
+            "description": f"Event von Fanfinity: {title}\n{url}",
+            "all_day": True
         })
 
     print(f"Fanfinity Events gefunden: {len(events)}")
