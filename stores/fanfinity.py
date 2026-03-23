@@ -10,17 +10,24 @@ def fetch_fanfinity_events():
         response = requests.get(API_URL, timeout=10)
         response.raise_for_status()
         data = response.json()
+
+        # API liefert eine LISTE → prüfen
+        if not isinstance(data, list):
+            print("Fanfinity API: Unerwartetes Format")
+            return events
+
     except Exception as e:
         print("Fanfinity API Fehler:", e)
         return events
 
     for item in data:
+        # Titel
         title = item.get("title", {}).get("rendered", "").strip()
         url = item.get("link", "")
 
-        # Datum aus Custom Fields
+        # Datum aus ACF
         acf = item.get("acf", {})
-        date_str = acf.get("event_date")  # z.B. "2026-05-12"
+        date_str = acf.get("event_date")  # Format: YYYY-MM-DD
 
         if not date_str:
             continue
@@ -28,7 +35,7 @@ def fetch_fanfinity_events():
         try:
             start = datetime.fromisoformat(date_str)
             end = start.replace(hour=23, minute=59)
-        except:
+        except Exception:
             continue
 
         events.append({
