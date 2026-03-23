@@ -1,42 +1,52 @@
 import requests
+from bs4 import BeautifulSoup
 from datetime import datetime
 
-API_URL = "https://www.fanfinity.gg/wp-json/wp/v2/event?per_page=100"
+URL = "https://www.fanfinity.gg/magic-the-gathering/"
 
 def fetch_fanfinity_events():
     events = []
 
     try:
-        response = requests.get(API_URL, timeout=10)
+        response = requests.get(URL, timeout=10)
         response.raise_for_status()
-        data = response.json()
-
-        # API liefert eine LISTE → prüfen
-        if not isinstance(data, list):
-            print("Fanfinity API: Unerwartetes Format")
-            return events
-
     except Exception as e:
-        print("Fanfinity API Fehler:", e)
+        print("Fanfinity Fehler:", e)
         return events
 
-    for item in data:
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Jeder Event ist ein Elementor Loop Item
+    items = soup.select('div[data-elementor-type="loop-item"]')
+
+    print(f"Fanfinity: Gefundene Loop-Items: {len(items)}")
+
+    for item in items:
         # Titel
-        title = item.get("title", {}).get("rendered", "").strip()
-        url = item.get("link", "")
-
-        # Datum aus ACF
-        acf = item.get("acf", {})
-        date_str = acf.get("event_date")  # Format: YYYY-MM-DD
-
-        if not date_str:
+        title_tag = item.select_one("h1.elementor-heading-title a, h2.elementor-heading-title a")
+        if not title_tag:
             continue
 
+        title = title_tag.text.strip()
+        url = title_tag["href"]
+
+        # Datum (z. B. "May 2026")
+        date_tag = item.select_one(".elementor-post-info__item--type-custom")
+        if not date_tag:
+            continue
+
+        date_text = date_tag.text.strip()
+
+        # Datum parsen
         try:
-            start = datetime.fromisoformat(date_str)
-            end = start.replace(hour=23, minute=59)
-        except Exception:
+            parsed_date = datetime.strptime(date_text, "%B %Y")
+        except:
+            print("Fanfinity: Konnte Datum nicht parsen:", date_text)
             continue
+
+        # Start/Ende setzen
+        start = parsed_date.replace(day=1, hour=9, minute=0)
+        end = parsed_date.replace(day=1, hour=18, minute=0)
 
         events.append({
             "title": title,
