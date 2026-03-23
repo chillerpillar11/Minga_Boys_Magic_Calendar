@@ -5,8 +5,8 @@ CALSCALE:GREGORIAN
 X-WR-CALNAME:Minga Boys Magic Kalender
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:fa81c705-9d8f-45fe-9032-955e572a0633@magic-munich
-DTSTAMP:20260323T112245
+UID:6a7fd7c5-5ce1-45f3-b80c-00d1b60a0b6a@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260404T110000
 DTEND:20260404T140000
 SUMMARY:Regional Championship Store Qualifier - Modern
@@ -15,8 +15,8 @@ URL:https://www.bb-spiele.de
 DESCRIPTION:Gewinner des WPN Qualifier erhält 1 Slot für den Regional Championship.
 END:VEVENT
 BEGIN:VEVENT
-UID:dd4cdc24-3986-4d7c-9b59-69340d91221a@magic-munich
-DTSTAMP:20260323T112245
+UID:4ecba124-679d-457d-9042-b95e7337ab61@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260327T170000
 DTEND:20260327T200000
 SUMMARY:Friday Night Magic: Modern
@@ -25,8 +25,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:da9ed83f-03c9-42ac-8821-fe77271b8c5b@magic-munich
-DTSTAMP:20260323T112245
+UID:1e6f970a-5c6c-4bed-82cd-8cf53a5e5789@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260410T170000
 DTEND:20260410T200000
 SUMMARY:Friday Night Magic: Modern
@@ -35,8 +35,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:e0abc135-f826-4dbd-bf7a-b8ae16cdc729@magic-munich
-DTSTAMP:20260323T112245
+UID:e198885d-b3d5-4481-966e-bc9ad57ee1f1@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260417T170000
 DTEND:20260417T200000
 SUMMARY:Friday Night Magic: Modern
@@ -45,8 +45,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:85c78617-9e76-4ebe-ad18-c847522fc56f@magic-munich
-DTSTAMP:20260323T112245
+UID:52d4b2b0-d848-496d-b27d-69153099e1be@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260424T170000
 DTEND:20260424T200000
 SUMMARY:Friday Night Magic: Modern
@@ -55,8 +55,8 @@ URL:https://www.funtainment.de
 DESCRIPTION:Buche Deinen Platz für dieses Event
 END:VEVENT
 BEGIN:VEVENT
-UID:6ec5d9c2-91b4-4468-a690-47a09cac963a@magic-munich
-DTSTAMP:20260323T112245
+UID:e2d47107-ce51-4b90-91a6-d00b2dbde01c@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260323T190000
 DTEND:20260323T220000
 SUMMARY:After Work Standard - 19:00 Uhr
@@ -65,8 +65,8 @@ URL:https://www.dd-munich.de
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:4a280c4f-93e9-4d5e-bc74-5de6b44cfa37@magic-munich
-DTSTAMP:20260323T112245
+UID:826db51d-25df-437a-8d3f-034c4aae1fc7@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260324T190000
 DTEND:20260324T220000
 SUMMARY:After Work Modern - 19:00 Uhr
@@ -75,8 +75,8 @@ URL:https://www.dd-munich.de
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:118c19f2-3148-447d-97fa-6a8217a5dbbc@magic-munich
-DTSTAMP:20260323T112245
+UID:31a1af81-fa47-428c-83b7-5b7374a1534b@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260325T190000
 DTEND:20260325T220000
 SUMMARY:After Work Legacy
@@ -85,8 +85,8 @@ URL:https://www.dd-munich.de
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:38df6db2-1344-48f8-b41a-eafd31dfce04@magic-munich
-DTSTAMP:20260323T112245
+UID:aa503f37-de5b-4ade-a758-310121c86746@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260326T190000
 DTEND:20260326T220000
 SUMMARY:After Work Premodern 19:00 Uhr
@@ -95,8 +95,8 @@ URL:https://www.dd-munich.de
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:d9ca6528-194a-4345-b833-462b45f9b5eb@magic-munich
-DTSTAMP:20260323T112245
+UID:23d3e558-d94e-4f1e-bd99-ad1f4fd726dd@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260327T183000
 DTEND:20260327T213000
 SUMMARY:Friday Night Standard 18.30
@@ -105,13 +105,53 @@ URL:https://www.dd-munich.de
 DESCRIPTION:
 END:VEVENT
 BEGIN:VEVENT
-UID:c8af8cfc-e444-46d5-9205-d64b27581cc8@magic-munich
-DTSTAMP:20260323T112245
+UID:4b6ec0fa-925a-4baa-9cc6-97aa90489e50@magic-munich
+DTSTAMP:20260323T112354
 DTSTART:20260403T183000
 DTEND:20260403T213000
 SUMMARY:Friday Night Modern 18.30
 LOCATION:Deck & Dice Munich
 URL:https://www.dd-munich.de
 DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:6217b260-ef0d-4cb2-9ac6-730254b7ebc7@magic-munich
+DTSTAMP:20260323T112354
+DTSTART:20260508T020000
+DTEND:20260511T015900
+SUMMARY:Magic Spotlight Series London 2026 (Fanfinity)
+LOCATION:Online
+URL:https://www.fanfinity.gg/event/magic-spotlight-series-london-2026/
+DESCRIPTION:Event von Fanfinity: Magic Spotlight Series London 2026 https://www.fanfinity.gg/event/magic-spotlight-series-london-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:d4575a31-f3b5-402d-8c09-ad1d082e8f72@magic-munich
+DTSTAMP:20260323T112354
+DTSTART:20260529T020000
+DTEND:20260601T015900
+SUMMARY:Ultimate Guard European Magic Series – Regional Championship – Prague 2026 (Fanfinity)
+LOCATION:Online
+URL:https://www.fanfinity.gg/event/ultimate-guard-european-magic-series-regional-championship-prague-2026/
+DESCRIPTION:Event von Fanfinity: Ultimate Guard European Magic Series – Regional Championship – Prague 2026 https://www.fanfinity.gg/event/ultimate-guard-european-magic-series-regional-championship-prague-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:5836f07c-6442-4221-aebc-dfca14bdc1a6@magic-munich
+DTSTAMP:20260323T112354
+DTSTART:20260724T020000
+DTEND:20260727T015900
+SUMMARY:Magic Spotlight Series Brussels 2026 (Fanfinity)
+LOCATION:Online
+URL:https://www.fanfinity.gg/event/magic-spotlight-series-brussels-2026/
+DESCRIPTION:Event von Fanfinity: Magic Spotlight Series Brussels 2026 https://www.fanfinity.gg/event/magic-spotlight-series-brussels-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:9b024b27-e63d-4f1a-b7d7-1b0aed391a71@magic-munich
+DTSTAMP:20260323T112354
+DTSTART:20261009T020000
+DTEND:20261012T015900
+SUMMARY:Ultimate Guard European Magic Series Regional Championship Ghent 2026 (Fanfinity)
+LOCATION:Online
+URL:https://www.fanfinity.gg/event/ultimate-guard-european-magic-series-regional-championship-ghent-2026/
+DESCRIPTION:Event von Fanfinity: Ultimate Guard European Magic Series Regional Championship Ghent 2026 https://www.fanfinity.gg/event/ultimate-guard-european-magic-series-regional-championship-ghent-2026/
 END:VEVENT
 END:VCALENDAR
