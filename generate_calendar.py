@@ -150,8 +150,11 @@ def generate_proxy_events(event):
 
     delta = timedelta(weeks=2) if is_biweekly else timedelta(weeks=1)
 
-    # ⭐ Feiertage dynamisch laden
-    holidays = load_bavarian_holidays(start.year)
+    # ⭐ Feiertage für Startjahr + Folgejahr laden
+    holidays = (
+        load_bavarian_holidays(start.year)
+        | load_bavarian_holidays(start.year + 1)
+    )
 
     # ⭐ Bis Jahresende generieren
     year_end = datetime(start.year, 12, 31, tzinfo=TZ)
@@ -176,7 +179,6 @@ def generate_proxy_events(event):
         next_end += delta
 
     return proxy_events
-
 
 # ---------------------------------------------------------
 # MAIN
