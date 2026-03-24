@@ -1,111 +1,79 @@
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Berlin")
 
-BASE_URL = "https://racoon-rises.com/pages/events"
+CALENDAR_ID = "c_7f090f10dbb843c0bac91ed58594c85b7ac59c12d1764b34a586dd01ca7a8502@group.calendar.google.com"
+API_KEY = "AIzaSyBqbhlk4kvuN9yC9nngmQ5ek2UfP7pnxJk"
+
+BASE_URL = (
+    "https://content.googleapis.com/calendar/v3/calendars/"
+    + CALENDAR_ID
+    + "/events"
+)
 
 
 def fetch_racoon_events():
     events = []
 
+    now = datetime.now(TZ)
+    one_year = now + timedelta(days=365)
+
+    params = {
+        "timeMin": now.isoformat(),
+        "timeMax": one_year.isoformat(),
+        "singleEvents": "true",
+        "orderBy": "startTime",
+        "maxResults": "2500",
+        "showDeleted": "false",
+        "key": API_KEY,
+    }
+
     try:
-        response = requests.get(BASE_URL, timeout=10)
+        response = requests.get(BASE_URL, params=params, timeout=10)
         response.raise_for_status()
+        data = response.json()
     except Exception as e:
-        print("Fehler beim Laden der Racoon-Rises-Seite:", e)
+        print("Fehler beim Laden des Racoon-Google-Calendars:", e)
         return []
 
-    soup = BeautifulSoup(response.text, "html.parser")
+    for item in data.get("items", []):
+        title = item.get("summary", "")
+        title_lower = title.lower()
 
-    # Jeder Tag ist ein <section class="day">
-    day_blocks = soup.select("section.day")
-
-    if not day_blocks:
-        print("WARNUNG: Keine <section class='day'> Blöcke gefunden!")
-        return []
-
-    for day in day_blocks:
-        # Datum extrahieren
-        date_tag = day.select_one(".day-head div")
-        if not date_tag:
+        # ⭐ Filter: RCQ oder Monthly Legacy
+        if not (
+            "rcq" in title_lower
+            or "regional championship qualifier" in title_lower
+            or "monthly legacy" in title_lower
+        ):
             continue
 
-        date_text = date_tag.get_text(strip=True)  # z.B. "Mittwoch, 1. April 2026"
+        # Startzeit
+        start_info = item.get("start", {})
+        end_info = item.get("end", {})
 
-        # Wochentag entfernen
-        try:
-            date_text_clean = date_text.split(",", 1)[1].strip()
-        except:
+        if "dateTime" not in start_info or "dateTime" not in end_info:
             continue
 
-        try:
-            date_obj = datetime.strptime(date_text_clean, "%d. %B %Y").date()
-        except:
-            continue
+        start_dt = datetime.fromisoformat(start_info["dateTime"]).astimezone(TZ)
+        end_dt = datetime.fromisoformat(end_info["dateTime"]).astimezone(TZ)
 
-        # Events des Tages
-        event_blocks = day.select(".day-items .ev")
+        # Beschreibung
+        desc = item.get("description", "")
 
-        for ev in event_blocks:
-            title_tag = ev.select_one(".ev-title")
-            if not title_tag:
-                continue
+        # URL
+        url = item.get("htmlLink", "")
 
-            title_raw = title_tag.get_text(strip=True)
-            title_lower = title_raw.lower()
-
-            # ⭐ Filter: Nur RCQs oder Monthly Legacy
-            if not (
-                "rcq" in title_lower
-                or "regional championship qualifier" in title_lower
-                or "monthly legacy" in title_lower
-            ):
-                continue
-
-            # Zeit extrahieren
-            time_tag = ev.select_one(".ev-time")
-            if not time_tag:
-                continue
-
-            time_text = time_tag.get_text(strip=True)  # z.B. "11:00 – 18:00"
-            try:
-                start_str, end_str = [t.strip() for t in time_text.split("–")]
-            except:
-                continue
-
-            # Datetime bauen
-            try:
-                start_dt = datetime.strptime(
-                    f"{date_obj} {start_str}", "%Y-%m-%d %H:%M"
-                ).replace(tzinfo=TZ)
-
-                end_dt = datetime.strptime(
-                    f"{date_obj} {end_str}", "%Y-%m-%d %H:%M"
-                ).replace(tzinfo=TZ)
-            except:
-                continue
-
-            # URL extrahieren (Button hat keinen Link → wir lassen es leer)
-            url = ""
-
-            # Beschreibung
-            desc = ""
-            if "rcq" in title_lower:
-                desc = "Regional Championship Qualifier"
-            elif "monthly legacy" in title_lower:
-                desc = "Monthly Legacy Event"
-
-            events.append({
-                "title": f"Racoon Rises – {title_raw}",
-                "start": start_dt,
-                "end": end_dt,
-                "location": "Racoon Rises, Ulm",
-                "url": url,
-                "description": desc,
-                "all_day": False
-            })
+        events.append({
+            "title": f"Racoon Rises – {title}",
+            "start": start_dt,
+            "end": end_dt,
+            "location": "Racoon Rises, Ulm",
+            "url": url,
+            "description": desc,
+            "all_day": False
+        })
 
     return events
