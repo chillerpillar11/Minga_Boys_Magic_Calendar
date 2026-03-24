@@ -1,117 +1,107 @@
 import requests
 import re
+from bs4 import BeautifulSoup
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Berlin")
 
-def _parse_ics_dt(line: str):
-    """
-    Parst eine DTSTART/DTEND-Zeile aus ICS.
-    Unterstützt:
-      - DTSTART:20260327T190000
-      - DTSTART;VALUE=DATE:20260327
-    """
-    _, value = line.split(":", 1)
-    value = value.strip()
-
-    # Ganztags-Event (nur Datum)
-    if "VALUE=DATE" in line or len(value) == 8:
-        dt = datetime.strptime(value, "%Y%m%d")
-        # Wir geben trotzdem ein datetime-Objekt zurück, aber ohne Uhrzeit
-        return dt.replace(tzinfo=TZ), True  # all_day = True
-
-    # DateTime-Event
-    dt = datetime.strptime(value, "%Y%m%dT%H%M%S")
-    return dt.replace(tzinfo=TZ), False
+BASE_URL = "https://countdown-spielewelt.de/events/liste/seite/{}/"
 
 
 def fetch_countdown_events():
-    url = "https://countdown-spielewelt.de/?post_type=tribe_events&ical=1&eventDisplay=list"
-
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        raw = response.text
-    except Exception as e:
-        print("Fehler beim Laden des Countdown-ICS:", e)
-        return []
-
     events = []
-    current = {}
-    in_event = False
+    page = 1
 
-    for line in raw.splitlines():
-        line = line.strip()
+    while True:
+        url = BASE_URL.format(page)
+        print(f"Lade Countdown-Seite {page}: {url}")
 
-        if line == "BEGIN:VEVENT":
-            in_event = True
-            current = {}
-            continue
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+        except Exception as e:
+            print("Fehler beim Laden:", e)
+            break
 
-        if line == "END:VEVENT":
-            in_event = False
+        soup = BeautifulSoup(response.text, "html.parser")
 
-            title_lower = current.get("title", "").strip().lower()
+        # Alle Event-Container
+        containers = soup.select(".tribe-events-calendar-list__event-details")
+
+        if not containers:
+            break  # keine Events mehr → fertig
+
+        for c in containers:
+            # Titel + URL
+            a = c.select_one(".tribe-events-calendar-list__event-title a")
+            if not a:
+                continue
+
+            title_raw = a.get_text(strip=True)
+            title_lower = title_raw.lower()
 
             # ⭐ Filter: Nur Legacy-Turniere
-            if "monatliches magic legacy turnier" in title_lower:
+            if "monatliches magic legacy turnier" not in title_lower:
+                continue
 
-                original_title = current.get("title", "").strip()
+            # Companion-Code extrahieren
+            match = re.search(r"\b([A-Z0-9]{6,8})\b$", title_raw)
+            code = match.group(1) if match else None
 
-                # ⭐ Companion-Code extrahieren (z.B. YEJ6RVV)
-                match = re.search(r"\b([A-Z0-9]{6,8})\b$", original_title)
-                code = match.group(1) if match else None
+            # Titel bereinigen
+            clean_title = title_raw.replace(code, "").strip() if code else title_raw
 
-                # ⭐ Code aus Titel entfernen
-                if code:
-                    clean_title = original_title.replace(code, "").strip()
-                else:
-                    clean_title = original_title
+            # Event-URL
+            event_url = a.get("href", "")
 
-                # ⭐ Description setzen (mit Companion-Link)
-                desc = ""
-                if code:
-                    desc = (
-                        f"Companion Code: {code}\n"
-                        f"Companion Link: https://magic.wizards.com/en/products/companion-app/tournament/{code}"
-                    )
+            # Datum + Zeiten
+            time_tag = c.select_one("time.tribe-events-calendar-list__event-datetime")
+            if not time_tag:
+                continue
 
-                current["title"] = clean_title
-                current["description"] = desc
-                current.setdefault("location", "Countdown Spielewelt Landsberg")
-                current.setdefault("url", "")
-                current.setdefault("all_day", current.get("all_day", False))
+            date_str = time_tag.get("datetime")  # z.B. 2026-04-26
+            start_span = c.select_one(".tribe-event-date-start")
+            end_span = c.select_one(".tribe-event-time")
 
-                events.append(current)
+            if not (date_str and start_span and end_span):
+                continue
 
-            continue
+            # Startzeit extrahieren
+            # Beispiel: "26 April | 11:00"
+            start_text = start_span.get_text(strip=True)
+            start_time = start_text.split("|")[-1].strip()
 
-        if not in_event:
-            continue
+            # Endzeit
+            end_time = end_span.get_text(strip=True)
 
-        # SUMMARY
-        if line.startswith("SUMMARY:"):
-            current["title"] = line.replace("SUMMARY:", "").strip()
+            # Datetime bauen
+            start_dt = datetime.strptime(f"{date_str} {start_time}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+            end_dt = datetime.strptime(f"{date_str} {end_time}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
 
-        # DTSTART
-        elif line.startswith("DTSTART"):
-            dt, all_day = _parse_ics_dt(line)
-            current["start"] = dt
-            # all_day nur setzen, wenn wir es noch nicht explizit hatten
-            current.setdefault("all_day", all_day)
+            # Beschreibung
+            desc_tag = c.select_one(".tribe-events-calendar-list__event-description p")
+            desc_text = desc_tag.get_text(strip=True) if desc_tag else ""
 
-        # DTEND
-        elif line.startswith("DTEND"):
-            dt, _ = _parse_ics_dt(line)
-            current["end"] = dt
+            # Companion-Link
+            companion_link = ""
+            if code:
+                companion_link = f"https://magic.wizards.com/en/products/companion-app/tournament/{code}"
 
-        # LOCATION
-        elif line.startswith("LOCATION:"):
-            current["location"] = line.replace("LOCATION:", "").strip()
+            description = desc_text
+            if code:
+                description += f"\nCompanion Code: {code}\nCompanion Link: {companion_link}"
 
-        # URL
-        elif line.startswith("URL:"):
-            current["url"] = line.replace("URL:", "").strip()
+            events.append({
+                "title": clean_title,
+                "start": start_dt,
+                "end": end_dt,
+                "location": "Countdown Spielewelt Landsberg",
+                "url": event_url,
+                "description": description,
+                "all_day": False
+            })
+
+        page += 1
 
     return events
