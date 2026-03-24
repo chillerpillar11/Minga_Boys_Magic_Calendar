@@ -7,20 +7,29 @@ TZ = ZoneInfo("Europe/Berlin")
 MTGO_URL = "https://www.mtgo.com/calendar.ics?format=Modern"
 
 
-def parse_ics_datetime(value: str) -> datetime:
+def parse_ics_datetime(value: str):
     """
     Parses ICS datetime strings like:
     - 20260412T110000Z
     - 20260412T110000
+    - 20260403 (all-day)
+    Returns (datetime, all_day: bool)
     """
     value = value.strip()
 
+    # All-day date (no time part)
+    if "T" not in value:
+        dt = datetime.strptime(value, "%Y%m%d").replace(tzinfo=TZ)
+        return dt, True
+
     # UTC with Z
     if value.endswith("Z"):
-        return datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=TZ)
+        dt = datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=TZ)
+        return dt, False
 
-    # Local time (rare)
-    return datetime.strptime(value, "%Y%m%dT%H%M%S").replace(tzinfo=TZ)
+    # Local time without Z
+    dt = datetime.strptime(value, "%Y%m%dT%H%M%S").replace(tzinfo=TZ)
+    return dt, False
 
 
 def fetch_mtgo_events():
@@ -47,37 +56,51 @@ def fetch_mtgo_events():
         if line == "END:VEVENT":
             in_event = False
 
-            # Only Modern events (the feed is already filtered, but just in case)
             title = current.get("SUMMARY", "")
+            if not title:
+                continue
+
+            # Feed ist schon Modern, aber zur Sicherheit:
             if "modern" not in title.lower():
                 continue
 
-            # Build event
+            start = current.get("DTSTART")
+            end = current.get("DTEND")
+            all_day = current.get("ALL_DAY", False)
+
+            if not start or not end:
+                continue
+
             events.append({
                 "title": title,
-                "start": current["DTSTART"],
-                "end": current["DTEND"],
+                "start": start,
+                "end": end,
                 "location": "MTGO",
                 "url": current.get("URL", ""),
                 "description": current.get("DESCRIPTION", ""),
-                "all_day": False
+                "all_day": all_day,
             })
             continue
 
         if not in_event:
             continue
 
-        # ICS fields
         if line.startswith("SUMMARY:"):
             current["SUMMARY"] = line[len("SUMMARY:"):].strip()
 
         elif line.startswith("DTSTART"):
             _, value = line.split(":", 1)
-            current["DTSTART"] = parse_ics_datetime(value)
+            dt, all_day = parse_ics_datetime(value)
+            current["DTSTART"] = dt
+            if all_day:
+                current["ALL_DAY"] = True
 
         elif line.startswith("DTEND"):
             _, value = line.split(":", 1)
-            current["DTEND"] = parse_ics_datetime(value)
+            dt, all_day = parse_ics_datetime(value)
+            current["DTEND"] = dt
+            if all_day:
+                current["ALL_DAY"] = True
 
         elif line.startswith("DESCRIPTION:"):
             current["DESCRIPTION"] = line[len("DESCRIPTION:"):].strip()
