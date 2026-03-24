@@ -5,6 +5,27 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Berlin")
 
+def _parse_ics_dt(line: str):
+    """
+    Parst eine DTSTART/DTEND-Zeile aus ICS.
+    Unterstützt:
+      - DTSTART:20260327T190000
+      - DTSTART;VALUE=DATE:20260327
+    """
+    _, value = line.split(":", 1)
+    value = value.strip()
+
+    # Ganztags-Event (nur Datum)
+    if "VALUE=DATE" in line or len(value) == 8:
+        dt = datetime.strptime(value, "%Y%m%d")
+        # Wir geben trotzdem ein datetime-Objekt zurück, aber ohne Uhrzeit
+        return dt.replace(tzinfo=TZ), True  # all_day = True
+
+    # DateTime-Event
+    dt = datetime.strptime(value, "%Y%m%dT%H%M%S")
+    return dt.replace(tzinfo=TZ), False
+
+
 def fetch_countdown_events():
     url = "https://countdown-spielewelt.de/?post_type=tribe_events&ical=1&eventDisplay=list"
 
@@ -31,10 +52,10 @@ def fetch_countdown_events():
         if line == "END:VEVENT":
             in_event = False
 
-            title = current.get("title", "").strip().lower()
+            title_lower = current.get("title", "").strip().lower()
 
             # ⭐ Filter: Nur Legacy-Turniere
-            if "monatliches magic legacy turnier" in title:
+            if "monatliches magic legacy turnier" in title_lower:
 
                 original_title = current.get("title", "").strip()
 
@@ -60,7 +81,7 @@ def fetch_countdown_events():
                 current["description"] = desc
                 current.setdefault("location", "Countdown Spielewelt Landsberg")
                 current.setdefault("url", "")
-                current.setdefault("all_day", False)
+                current.setdefault("all_day", current.get("all_day", False))
 
                 events.append(current)
 
@@ -75,13 +96,15 @@ def fetch_countdown_events():
 
         # DTSTART
         elif line.startswith("DTSTART"):
-            dt = line.split(":")[1]
-            current["start"] = datetime.strptime(dt, "%Y%m%dT%H%M%S").replace(tzinfo=TZ)
+            dt, all_day = _parse_ics_dt(line)
+            current["start"] = dt
+            # all_day nur setzen, wenn wir es noch nicht explizit hatten
+            current.setdefault("all_day", all_day)
 
         # DTEND
         elif line.startswith("DTEND"):
-            dt = line.split(":")[1]
-            current["end"] = datetime.strptime(dt, "%Y%m%dT%H%M%S").replace(tzinfo=TZ)
+            dt, _ = _parse_ics_dt(line)
+            current["end"] = dt
 
         # LOCATION
         elif line.startswith("LOCATION:"):
