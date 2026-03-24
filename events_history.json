@@ -2176,5 +2176,14 @@
     "url": "https://www.dd-munich.de",
     "description": "",
     "all_day": false
+  },
+  {
+    "title": "Countdown \u2013 Monatliches Magic Legacy Turnier",
+    "start": "2026-03-29T11:00:00+02:00",
+    "end": "2026-03-29T14:00:00+02:00",
+    "location": "Countdown Spielewelt Landsberg",
+    "url": "https://countdown-spielewelt.de/event/monatliches-magic-legacy-turnier-yej6rvv/",
+    "description": "Companion Code: YEJ6RVV\nCompanion Link: https://magic.wizards.com/en/products/companion-app/tournament/YEJ6RVV",
+    "all_day": false
   }
 ]
