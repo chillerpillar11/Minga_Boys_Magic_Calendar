@@ -33,13 +33,29 @@ def parse_ics_datetime(value: str):
 
 
 def fetch_mtgo_events():
-    try:
-        response = requests.get(MTGO_URL, timeout=10)
-        response.raise_for_status()
-        ics = response.text
-    except Exception as e:
-        print("Fehler beim Laden des MTGO ICS:", e)
+    ics = None
+
+    # ⭐ 3 Versuche, weil MTGO oft langsam ist
+    for attempt in range(3):
+        try:
+            response = requests.get(MTGO_URL, timeout=15)  # längeres Timeout
+            response.raise_for_status()
+
+            # Leere Antwort? (kommt bei MTGO vor)
+            if not response.text.strip():
+                print(f"MTGO: Leere Antwort (Versuch {attempt+1}/3)")
+                continue
+
+            ics = response.text
+            break
+
+        except Exception as e:
+            print(f"MTGO: Fehler beim Laden (Versuch {attempt+1}/3): {e}")
+
+    if not ics:
+        print("MTGO: Keine Daten nach 3 Versuchen.")
         return []
+
 
     events = []
     current = {}
