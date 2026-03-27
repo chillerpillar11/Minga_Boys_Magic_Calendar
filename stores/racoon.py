@@ -34,7 +34,7 @@ def _normalize_title(raw_title: str) -> str:
     t = raw_title.lower()
 
     if "elm" in t or "eternal weekend" in t or "ewk" in t:
-        return "Legacy Qualifier"
+        return "Legacy ELM Qualifier"
 
     return raw_title
 
