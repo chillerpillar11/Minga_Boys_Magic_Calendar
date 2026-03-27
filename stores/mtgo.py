@@ -8,40 +8,44 @@ MTGO_URL = "https://www.mtgo.com/calendar.ics?format=Modern"
 
 
 def parse_ics_datetime(value: str):
-    """
-    Parses ICS datetime strings like:
-    - 20260412T110000Z
-    - 20260412T110000
-    - 20260403 (all-day)
-    Returns (datetime, all_day: bool)
-    """
     value = value.strip()
 
-    # All-day date (no time part)
     if "T" not in value:
         dt = datetime.strptime(value, "%Y%m%d").replace(tzinfo=TZ)
         return dt, True
 
-    # UTC with Z
     if value.endswith("Z"):
         dt = datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=TZ)
         return dt, False
 
-    # Local time without Z
     dt = datetime.strptime(value, "%Y%m%dT%H%M%S").replace(tzinfo=TZ)
     return dt, False
+
+
+def is_real_modern(title: str):
+    t = title.lower()
+
+    # ❌ Premodern rausfiltern
+    if "premodern" in t:
+        return False
+
+    # ✔ echtes Modern erkennen (als Wort)
+    # Beispiele:
+    # "Modern League" → OK
+    # "MTGO Modern Challenge" → OK
+    # "Premodern League" → bereits oben gefiltert
+    words = t.replace("-", " ").replace("_", " ").split()
+    return "modern" in words or t.startswith("modern") or " modern " in t
 
 
 def fetch_mtgo_events():
     ics = None
 
-    # ⭐ 3 Versuche, weil MTGO oft langsam ist
     for attempt in range(3):
         try:
-            response = requests.get(MTGO_URL, timeout=15)  # längeres Timeout
+            response = requests.get(MTGO_URL, timeout=15)
             response.raise_for_status()
 
-            # Leere Antwort? (kommt bei MTGO vor)
             if not response.text.strip():
                 print(f"MTGO: Leere Antwort (Versuch {attempt+1}/3)")
                 continue
@@ -55,7 +59,6 @@ def fetch_mtgo_events():
     if not ics:
         print("MTGO: Keine Daten nach 3 Versuchen.")
         return []
-
 
     events = []
     current = {}
@@ -76,8 +79,8 @@ def fetch_mtgo_events():
             if not title:
                 continue
 
-            # Feed ist schon Modern, aber zur Sicherheit:
-            if "modern" not in title.lower():
+            # ⭐ Neuer, korrekter Modern-Check
+            if not is_real_modern(title):
                 continue
 
             start = current.get("DTSTART")
