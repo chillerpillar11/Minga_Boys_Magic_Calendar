@@ -2680,5 +2680,23 @@
     "url": "https://www.google.com/calendar/event?eid=MGVjZGNpYTJiOWQ2NDI4bDFxNm9laDhuY2wgY183ZjA5MGYxMGRiYjg0M2MwYmFjOTFlZDU4NTk0Yzg1YjdhYzU5YzEyZDE3NjRiMzRhNTg2ZGQwMWNhN2E4NTAyQGc",
     "description": "",
     "all_day": false
+  },
+  {
+    "title": "Fanfinity \u2013 Magic Spotlight Series London 2026",
+    "start": "2026-03-06T00:00:00",
+    "end": "2026-03-09T00:00:00",
+    "location": "Online",
+    "url": "https://www.fanfinity.gg/event/magic-spotlight-series-london-2026/",
+    "description": "Event von Fanfinity: Magic Spotlight Series London 2026\nhttps://www.fanfinity.gg/event/magic-spotlight-series-london-2026/",
+    "all_day": true
+  },
+  {
+    "title": "Racoon Rises \u2013 Legacy ELM Qualifier",
+    "start": "2026-05-31T11:00:00+02:00",
+    "end": "2026-05-31T17:00:00+02:00",
+    "location": "Racoon Rises, Ulm",
+    "url": "https://www.google.com/calendar/event?eid=MGVjZGNpYTJiOWQ2NDI4bDFxNm9laDhuY2wgY183ZjA5MGYxMGRiYjg0M2MwYmFjOTFlZDU4NTk0Yzg1YjdhYzU5YzEyZDE3NjRiMzRhNTg2ZGQwMWNhN2E4NTAyQGc",
+    "description": "",
+    "all_day": false
   }
 ]
