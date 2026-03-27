@@ -46,11 +46,10 @@ def normalize_title(title: str, fmt: str):
     if "elm" in t:
         return "Legacy Qualifier"
 
-    # Otherwise keep original
     return title
 
 
-def fetch_raccoon_events():
+def fetch_racoon_events():
     events = []
     page = 1
 
@@ -67,11 +66,11 @@ def fetch_raccoon_events():
             end = datetime.fromisoformat(ev["end_date"]).astimezone(TZ)
 
             events.append({
-                "title": f"Raccoon – {title}",
+                "title": f"Racoon – {title}",
                 "format": fmt,
                 "start": start,
                 "end": end,
-                "location": "Raccoon Rises, München",
+                "location": "Racoon Rises, München",
                 "url": ev.get("url", ""),
                 "description": ev.get("excerpt", ""),
                 "all_day": False
